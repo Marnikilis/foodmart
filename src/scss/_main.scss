@@ -1,0 +1,59 @@
+@import '../scss/mixins';
+@import '../scss/settings';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: none !important;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: $main-font;
+  color: #222222;
+  background-color: #FFFFFF;
+}
+
+button{
+  @include btn-reset();
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: capitalize;
+  color: #FFFFFF;
+}
+
+a,
+a:link,
+a:visited{
+
+}
+
+select,
+input{
+  border: none;
+  font-family: inherit;
+  background-color: inherit;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.mainContainer {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 154px;
+  display: flex;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
