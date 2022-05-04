@@ -29,15 +29,14 @@ header{
   margin-right: 25px;
 
   select{
-    padding: 0 10px;
+    padding: 0 25px 0 10px;
   }
 }
 
 .arrow{
   display: block;
   position: absolute;
-  background-color: #F6F6F6;
-  top: 40%;
+  top: 50%;
   right: 3px;
   pointer-events: none;
 }
@@ -48,6 +47,7 @@ header{
   input{
     caret-color: #DEDEDE;
     width: 400px;
+    margin-right: 5px;
     &::placeholder{
       padding: 0 20px;
     }

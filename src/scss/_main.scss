@@ -18,7 +18,7 @@ body {
   background-color: #FFFFFF;
 }
 
-button{
+button {
   @include btn-reset();
   font-family: inherit;
   font-size: inherit;
@@ -28,12 +28,21 @@ button{
 
 a,
 a:link,
-a:visited{
+a:visited {
+  text-decoration: none;
+  padding: 10px 24px;
+  transition: all .5s;
+  border-radius: 6px;
+  color: inherit;
+}
 
+a.active {
+  background-color: #FFC43F;
 }
 
 select,
-input{
+input {
+  appearance: none;
   border: none;
   font-family: inherit;
   background-color: inherit;
