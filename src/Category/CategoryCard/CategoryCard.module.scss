@@ -1,5 +1,4 @@
 .cardContainer{
-  margin-top: 50px;
   background: #FFFFFF;
   border: 1px solid #FBFBFB;
   box-shadow: 0 5px 22px rgba(0, 0, 0, 0.04);
@@ -12,6 +11,11 @@
 
   &:not(:last-child){
     margin-right: 33px;
+  }
+
+  &:hover{
+    box-shadow: 0 21px 44px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
   }
 }
 

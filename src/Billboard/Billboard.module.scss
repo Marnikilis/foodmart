@@ -30,7 +30,40 @@
   top: 10px;
   right: 20px;
 }
+.dots{
+  position: absolute;
+  height: 16px;
+  width: 64px;
+  top:90%;
+  left: 45%;
 
+  span{
+    position: absolute;
+    background-color: #FFFFFF;
+    height: 100%;
+    width: 25%;
+    border-radius: 50%;
+
+    &:before,
+    &:after{
+      content: '';
+      position: absolute;
+      background-color: #FFFFFF;
+      border-radius: 50%;
+      height: 100%;
+      width: 100%;
+    }
+    &:before{
+      transform: translateX(24px);
+    }
+    &:after{
+      transform: translateX(48px);
+    }
+    &:hover{
+      background-color: #FFC43F;
+    }
+  }
+}
 .shopNowCardContent{
   padding: 120px 120px 0;
 }
@@ -53,6 +86,7 @@
   color: #727272;
   font-size: 18px;
   margin-bottom:60px;
+  text-transform: capitalize;
 }
 
 .shopBtn{

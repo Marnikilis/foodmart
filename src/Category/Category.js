@@ -20,10 +20,9 @@ const categories = [
 
 const Category = () => {
   return (
-    <div>
       <div className={'mainContainer'}>
         <div className={styles.container}>
-          <div className={styles.headingContainer}>
+          <div className={'headingContainer'}>
             <div className={'heading'}>Category</div>
             <div className={'buttons'}>
               <button>
@@ -44,7 +43,6 @@ const Category = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

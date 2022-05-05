@@ -21,6 +21,9 @@ const Billboard = () => {
             <div className={styles.bottleImg}>
               <img src={bottle}/>
             </div>
+            <div className={styles.dots}>
+              <span/>
+            </div>
           </div>
           <div>
             <div className={styles.fruitsCard}>
