@@ -5,6 +5,7 @@ import Billboard from "./Billboard/Billboard";
 import Category from "./Category/Category";
 import Brands from "./Brands/Brands";
 import TrendingProducts from "./TrendingProducts/TrendingProducts";
+import Banners from "./Banners/Banners";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Category/>
         <Brands/>
         <TrendingProducts/>
+        <Banners/>
       </div>
     </div>
   );

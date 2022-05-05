@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './Billboard.module.scss';
 import CardSaleItem from "../CardSale/CardSaleItem";
-import {ReactComponent as Bottle} from './billboardSvg/bottle.svg';
 import bottle from './billboardSvg/bottle.png'
 
 const Billboard = () => {
