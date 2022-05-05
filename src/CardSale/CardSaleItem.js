@@ -9,9 +9,10 @@ const CardSaleItem = ({discount, title}) => {
       <div className={styles.discountText}>{discount}% off</div>
       <div className={styles.saleText}><span/>sale</div>
       <div className={styles.title}>{title}</div>
-      <div className={styles.categoryText}>
+      <button className={styles.categoryText}>
         <span>shop the category</span>
-        <ArrowRight/></div>
+        <ArrowRight/>
+        </button>
       </div>
   );
 };
