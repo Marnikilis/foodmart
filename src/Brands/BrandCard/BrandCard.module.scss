@@ -1,0 +1,29 @@
+.brandCardContainer{
+  padding: 16px;
+  background: #FFFFFF;
+  border: 1px solid #FBFBFB;
+  box-shadow: 0 5px 22px rgba(0, 0, 0, 0.04);
+  border-radius: 16px;
+  display: flex;
+
+  img{
+    width: 160px;
+  }
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 15px;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 162%;
+  font-size: 17px;
+
+  span{
+    color: #C7C7C7;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+}
