@@ -1,0 +1,42 @@
+nav{
+  height: 86px;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.selectContainer{
+  position: relative;
+  margin-right: 147px;
+  select{
+    padding-right: 16px;
+    text-transform: capitalize;
+  }
+}
+
+.arrow{
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  pointer-events: none;
+}
+
+.navigation {
+  display: flex;
+  margin-right: auto;
+}
+
+.presentContainer{
+  display: flex;
+  align-items: center;
+
+  span{
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-left: 10px;
+  }
+}
