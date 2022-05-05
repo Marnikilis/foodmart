@@ -14,6 +14,7 @@ html,
 body {
   height: 100%;
   font-family: $main-font;
+  font-size: 16px;
   color: #222222;
   background-color: #FFFFFF;
 }
@@ -30,7 +31,7 @@ a,
 a:link,
 a:visited {
   text-decoration: none;
-  padding: 10px 24px;
+  padding: 10px 25px;
   transition: all .5s;
   border-radius: 6px;
   color: inherit;
@@ -45,6 +46,7 @@ input {
   appearance: none;
   border: none;
   font-family: inherit;
+  font-size: inherit;
   background-color: inherit;
 }
 

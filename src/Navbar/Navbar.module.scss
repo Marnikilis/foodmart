@@ -5,13 +5,12 @@ nav{
 .container{
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 100%;
 }
 
 .selectContainer{
   position: relative;
-
+  margin-right: 147px;
   select{
     padding-right: 16px;
     text-transform: capitalize;
@@ -28,6 +27,7 @@ nav{
 
 .navigation{
   display: flex;
+  margin-right: auto;
 }
 
 
