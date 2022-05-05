@@ -24,7 +24,34 @@ button {
   font-family: inherit;
   font-size: inherit;
   text-transform: capitalize;
-  color: #FFFFFF;
+  color: inherit;
+}
+.buttons{
+  display: flex;
+}
+
+.btnText{
+  display: inline-block;
+  font-weight: 600;
+  color: #787878;
+  margin-right: 8px;
+}
+.arrowBtn{
+  background-color: #F1F1F1;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 6px 14px;
+  margin-left: 13px;
+  transition: all 0.5s;
+
+
+  &:first-child{
+    margin-left: 47px;
+  }
+  &:hover{
+    background-color: #FFC43F;
+  }
 }
 
 a,
@@ -68,3 +95,7 @@ input {
   flex: 1 0 auto;
 }
 
+.heading{
+  font-family: $heading-font;
+  font-size: 36px;
+}
