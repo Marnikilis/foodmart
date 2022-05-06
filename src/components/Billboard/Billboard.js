@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './Billboard.module.scss';
 import CardSaleItem from "../CardSale/CardSaleItem";
-import bottle from './billboardSvg/bottle.png'
+// import {ReactComponent as Bottle} from './billboardSvg/b.svg';
+import bottle from './billboardSvg/b.svg'
 
 const Billboard = () => {
   return (
@@ -17,9 +18,7 @@ const Billboard = () => {
               </div>
               <button className={styles.shopBtn}>shop now</button>
             </div>
-            <div className={styles.bottleImg}>
-              <img src={bottle}/>
-            </div>
+              <img src={bottle} className={styles.bottleImg}/>
             <div className={styles.dots}>
               <span/>
             </div>

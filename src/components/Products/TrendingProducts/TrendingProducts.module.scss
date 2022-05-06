@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 .productsNav{
-  height: 40px;
+  height: 75px;
   width: 100%;
   border-bottom: 2px solid #F6F6F6;
   display: flex;
@@ -14,21 +14,18 @@
 .link,
 .link:link,
 .link:visited {
-  text-transform: uppercase;
   color: #666666;
+  text-transform: uppercase;
   font-weight: 600;
-  position: relative;
+  margin-left: 30px;
+  animation: all 0.5s;
+  padding-bottom: 26px;
 
-  &:before{
-    content: attr(data);
-    position: absolute;
-    color: #222222;
-    top: -10%;
-    left: 0;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    background-color: #FFFFFF;
+  &:global{
+    &.active {
+      color: #222222;
+      border-bottom: 3px solid #FFC43F;
+    }
   }
 }
 
