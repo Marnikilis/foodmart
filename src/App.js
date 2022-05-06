@@ -11,6 +11,7 @@ import RegisterForm from "./containers/RegisterForm/RegisterForm";
 import BestSellProducts from "./components/Products/BestSellProducts/BestSellProducts";
 import LandedItems from "./components/Products/LandedItems/LandedItems";
 import Articles from "./components/Articles/Articles";
+import FoodMartApp from "./components/FoodMartApp/FoodMartApp";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <BestSellProducts/>
         <LandedItems/>
         <Articles/>
+        <FoodMartApp/>
       </div>
     </div>
   );

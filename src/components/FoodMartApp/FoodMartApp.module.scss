@@ -1,0 +1,37 @@
+.container{
+  margin: 170px 0;
+  background-image: url("./appImg/bgApp.svg");
+  background-color: #FFF9EB;
+  border-radius: 46px;
+  height: 547px;
+  position: relative;
+  display: flex;
+}
+.phone{
+  top: -42px;
+  left: 230px;
+  position: absolute;
+}
+.textContainer{
+  flex: 0 1 43%;
+  margin-left: auto;
+  margin-right: 260px;
+  align-self: center;
+
+  &>*{
+    margin-bottom: 25px;
+  }
+  span{
+    color: #555555;
+    line-height: 225%;
+  }
+}
+
+.downloadLinks{
+  display: flex;
+  margin-top: 50px;
+
+  &>*{
+   margin-right: 14px;
+  }
+}
