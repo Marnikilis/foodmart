@@ -1,0 +1,94 @@
+@import '../../scss/mixins';
+@import '../../scss/settings';
+
+
+.container{
+  width: 100%;
+  background-color: #E9F3F8;
+  border-radius: 16px;
+  height: 678px;;
+  display: flex;
+  margin-bottom: 170px;
+  position: relative;
+  overflow: hidden;
+
+
+  form{
+    display: flex;
+    flex: 0 1 38%;
+    flex-direction: column;
+    margin: 130px 200px 0 0;
+
+
+    input{
+      width: 80%;
+      background-color: #FFFFFF;
+      padding: 0 13px;
+
+      &::placeholder{
+        color: #A9A9A9;
+      }
+    }
+    label{
+      margin-bottom: 10px;
+    }
+  }
+}
+.leavesTop{
+  position: absolute;
+  bottom: -80px;
+  left: -40px;
+  width: 450px;
+  height: 400px;
+  z-index: 10;
+  transform: rotate(-28deg);
+}
+.leavesBottom{
+  position: absolute;
+  top: -10px;
+  right: -20px;
+  width: 250px;
+  height: 300px;
+  transform: scaleX(-1) rotate(210deg);
+}
+.textContainer{
+  padding: 130px 160px 0 270px;
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 30%;
+
+
+  span{
+    &:nth-child(1){
+    font-family: $heading-font;
+      font-size: 50px;
+      line-height: 70px;
+      text-transform: capitalize;
+
+      span{
+        color: #FFC43F;
+      }
+  }
+    &:nth-child(2){
+      font-size: 18px;
+      color: #555555;
+      line-height: 225%;
+  }
+  }
+}
+
+.formInput{
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 25px;
+}
+
+.registerBtn{
+  margin-top: 20px;
+  background-color: #222222;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  border-radius: 10px;
+  padding: 16px 188px;
+}

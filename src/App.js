@@ -10,6 +10,7 @@ import TopProducts from "./components/Products/TopProducts/TopProducts";
 import RegisterForm from "./containers/RegisterForm/RegisterForm";
 import BestSellProducts from "./components/Products/BestSellProducts/BestSellProducts";
 import LandedItems from "./components/Products/LandedItems/LandedItems";
+import Articles from "./components/Articles/Articles";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <RegisterForm/>
         <BestSellProducts/>
         <LandedItems/>
+        <Articles/>
       </div>
     </div>
   );

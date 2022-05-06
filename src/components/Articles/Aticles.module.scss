@@ -1,0 +1,10 @@
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.articlesContainer{
+  display: flex;
+  gap: 50px;
+}

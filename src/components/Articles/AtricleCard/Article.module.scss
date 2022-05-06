@@ -1,0 +1,45 @@
+.container{
+  padding: 25px;
+  background-color: #FFFFFF;
+  border: 1px solid #FBFBFB;
+  box-shadow: 0 5px 22px rgba(0, 0, 0, 0.04);
+  border-radius: 16px;
+
+
+  img{
+    width: 453px;
+    height: 365px;
+  }
+}
+
+.dataContainer{
+  margin-top: 23px;
+  display: flex;
+  font-size: 13px;
+  color: #9D9D9D;
+
+  &>*{
+    margin-left: 10px;
+
+    &:not(:last-child){
+      padding-right: 10px;
+      border-right: 1px solid #DEDEDE;
+    }
+  }
+  span{
+    margin-left: 5px;
+  }
+}
+.textContainer{
+  padding: 14px 10px;
+  color: #747474;
+  line-height: 221%;
+  span{
+    display: block;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 177%;
+    text-transform: capitalize;
+    color: #222222;
+  }
+}
