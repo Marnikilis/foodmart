@@ -5,22 +5,32 @@ header{
 
 .container{
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
-
-  &>*{
-    display: flex;
-  }
 }
+
+.firstHeaderContainer{
+  flex: 0 1 65%;
+  display: flex;
+  gap: 60px;
+}
+
+.secondHeaderContainer{
+  display: flex;
+  gap: 70px;
+}
+
 .searchContainer{
-  margin-left: 60px;
+  width: 100%;
   display: flex;
   align-items: center;
   background-color: #F8F8F8;
   border: 1px solid #F8F8F8;
   border-radius: 4px;
   padding: 12px 15px;
-  margin-right: auto;
+  max-width: 650px;
+  flex: 0 1 50%;
 }
 
 .selectContainer{
@@ -43,10 +53,12 @@ header{
 .searchInput{
   display: flex;
   align-items: center;
+  width: 100%;
 
   input{
+    display: inline-block;
+    width: 100%;
     caret-color: #DEDEDE;
-    width: 400px;
     margin-right: 5px;
     &::placeholder{
       padding: 0 20px;
@@ -77,12 +89,5 @@ header{
 .userContainer{
   display: flex;
   align-items: flex-end;
-
-  &>*{
-    margin-left: 20px;
-
-    &:first-child{
-      margin-left: 70px;
-    }
-  }
+  gap: 30px;
 }

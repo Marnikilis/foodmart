@@ -12,6 +12,7 @@ const Header = () => {
   return (
     <header>
       <div className={`mainContainer ${styles.container}`}>
+        <div className={styles.firstHeaderContainer}>
           <NavLink to='/'><Logo/></NavLink>
           <div className={styles.searchContainer}>
             <div className={styles.selectContainer}>
@@ -25,7 +26,9 @@ const Header = () => {
               <Search/>
             </div>
           </div>
-        <div>
+        </div>
+
+        <div className={styles.secondHeaderContainer}>
           <div className={styles.supportContainer}>
             <div className={styles.captionText}>For support ?</div>
             <div className={styles.captionNumber}>+980-34984089</div>

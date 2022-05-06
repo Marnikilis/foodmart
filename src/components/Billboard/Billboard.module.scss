@@ -2,43 +2,29 @@
 @import '../../scss/settings';
 
 .background{
-  background-image: url("billboardSvg/bg.svg");
-  background-repeat: repeat;
+  background: url("./billboardSvg/bg.png") repeat;
+  background-size: cover;
 }
 
 .container{
   width: 100%;
   margin: 170px 0;
   display: flex;
-  justify-content: center;
+  justify-content: center
 }
 
-.shopNowCard{
-  //flex: 0 1 70%;
-  position: relative;
+.firstCardContainer{
+  background: #E6F3FA url("./billboardSvg/bottle.png") no-repeat right bottom;
+  background-size: contain;
   display: flex;
-  //padding: 30px;
-  background-color: #E6F3FA;
   border-radius: 12px;
   margin-right: 30px;
+  flex: 0 1 60%;
+}
 
-  //img{
-  //  position: absolute;
-  //  //width: 100%;
-  //  //flex: 0 1 70%;
-  //  //width: 372px;
-  //}
-}
-.bottleImg{
-  height: 90%;
-  margin-right: 30px;
-}
 .dots{
-  position: absolute;
   height: 16px;
   width: 64px;
-  top:90%;
-  left: 45%;
 
   span{
     position: absolute;
@@ -67,10 +53,9 @@
     }
   }
 }
-.shopNowCardContent{
+.shopNowCard{
   display: flex;
   flex-direction: column;
-  //justify-content: center;
   padding: 110px 30px 0 120px;
 }
 
@@ -110,19 +95,27 @@
   }
 }
 
+.secondCardsContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  flex: 0 1 40%;
+}
 .fruitsCard,
 .bakeCard{
+  max-width: 597px;;
+  display: flex;
   border-radius: 12px;
-  padding: 56px 54px 66px;
-  width: 490px;
+  padding: 55px;
+  //flex: 0 0 100%;
 }
 .fruitsCard{
-  background-image: url("billboardSvg/fruitsbg.svg");
-  background-color: #EEF5E4;
-  margin-bottom: 30px;
+  background: #EEF5E4 url("./billboardSvg/fruits.png") no-repeat right bottom;
+  background-size: contain;
 }
 .bakeCard{
-  background-image: url("billboardSvg/bakebg.svg");
-  background-color: #F9EBE7;
+  background: #F9EBE7 url("./billboardSvg/bakery.png") no-repeat right bottom;
+  background-size: contain;
 }
 

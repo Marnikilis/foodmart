@@ -7,7 +7,9 @@ import leavesBottom from '../../images/leaves2.png';
 
 const RegisterForm = () => {
   return (
+    <div>
     <div className={'mainContainer'}>
+      <div className={styles.wrapperContainer}>
       <div className={styles.container}>
         <img src={leavesTop} className={styles.leavesTop}/>
         <img src={leavesBottom} className={styles.leavesBottom}/>
@@ -35,6 +37,8 @@ const RegisterForm = () => {
           <button className={`blackBtn ${styles.registerBtn}`}>Register it now</button>
         </form>
       </div>
+      </div>
+    </div>
     </div>
   );
 };

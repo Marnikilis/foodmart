@@ -9,7 +9,8 @@
 
 .productsContainer{
   display: flex;
-  gap: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .expiresContainer{

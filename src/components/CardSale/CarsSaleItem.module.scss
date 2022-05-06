@@ -1,7 +1,9 @@
 @import '../../scss/mixins';
 @import '../../scss/settings';
 
-
+.cardContainer{
+  flex: 1 1 60%;
+}
 .discountText{
   display: block;
   font-family: $caption-font;

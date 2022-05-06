@@ -2,8 +2,12 @@
 @import '../../scss/settings';
 
 
+.wrapperContainer{
+  display: flex;
+  justify-content: center;
+}
+
 .container{
-  width: 100%;
   background-color: #E9F3F8;
   border-radius: 16px;
   height: 678px;;

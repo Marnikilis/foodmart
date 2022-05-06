@@ -14,7 +14,6 @@ html,
 body {
   height: 100%;
   font-family: $main-font;
-  font-size: 16px;
   color: #222222;
   background-color: #FFFFFF;
 }
@@ -28,6 +27,7 @@ button {
 }
 .buttons{
   display: flex;
+  gap: 47px;
 }
 
 .btnText{
@@ -44,11 +44,6 @@ button {
   padding: 6px 14px;
   margin-left: 13px;
   transition: all 0.5s;
-
-
-  &:first-child{
-    margin-left: 47px;
-  }
 
   &:disabled{
     background-color: #F1F1F1;
@@ -86,9 +81,9 @@ input {
 }
 
 .mainContainer {
-  max-width: 1920px;
+  max-width: 1620px;
   margin: 0 auto;
-  padding: 0 154px;
+  padding: 0 15px;
   display: flex;
 }
 
