@@ -14,6 +14,7 @@ import Articles from "./components/Articles/Articles";
 import FoodMartApp from "./components/FoodMartApp/FoodMartApp";
 import PopularProducts from "./components/PopularProducts/PopularProducts";
 import Services from "./components/Services/Services";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <FoodMartApp/>
         <PopularProducts/>
         <Services/>
+        <Footer/>
       </div>
     </div>
   );

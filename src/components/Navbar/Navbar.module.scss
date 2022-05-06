@@ -29,7 +29,18 @@ nav{
   display: flex;
   margin-right: auto;
 }
+.link,
+.link:link,
+.link:visited {
+  padding: 10px 25px;
+  border-radius: 6px;
 
+  &:global{
+    &.active {
+      background-color: #FFC43F;
+    }
+  }
+}
 .presentContainer{
   display: flex;
   align-items: center;

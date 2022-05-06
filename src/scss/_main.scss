@@ -54,19 +54,25 @@ button {
   }
 }
 
+.blackBtn{
+  background-color: #222222;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
 a,
 a:link,
 a:visited {
   text-decoration: none;
-  padding: 10px 25px;
+  //padding: 10px 25px;
   transition: all .5s;
-  border-radius: 6px;
+  //border-radius: 6px;
   color: inherit;
 }
-
-a.active {
-  background-color: #FFC43F;
-}
+//
+//a.active {
+//  background-color: #FFC43F;
+//}
 
 select,
 input {

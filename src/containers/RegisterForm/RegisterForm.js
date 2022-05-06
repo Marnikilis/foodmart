@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './RegisterForm.module.scss';
 import {ReactComponent as Email} from './formSvg/email.svg';
 import {ReactComponent as Password} from './formSvg/password.svg';
-import leavesTop from '../../components/Banners/bannersImg/leaves1.png';
-import leavesBottom from '../../components/Banners/bannersImg/leaves2.png';
+import leavesTop from '../../images/leaves1.png';
+import leavesBottom from '../../images/leaves2.png';
 
 const RegisterForm = () => {
   return (
@@ -32,7 +32,7 @@ const RegisterForm = () => {
             <Password/>
             <input placeholder='Repeat password...'/>
           </div>
-          <button className={styles.registerBtn}>Register it now</button>
+          <button className={`blackBtn ${styles.registerBtn}`}>Register it now</button>
         </form>
       </div>
     </div>

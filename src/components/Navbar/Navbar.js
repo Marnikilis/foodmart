@@ -16,13 +16,13 @@ const Navbar = () => {
         <ArrowDown className={styles.arrow}/>
       </div>
         <div className={styles.navigation}>
-          <NavLink to='/'>Home</NavLink>
-          <NavLink to='/shop'>Shop</NavLink>
-          <NavLink to='/page'>Page</NavLink>
-          <NavLink to='/services'>Services</NavLink>
-          <NavLink to='/blog'>Blog</NavLink>
-          <NavLink to='/contact'>Contact</NavLink>
-          <NavLink to='/offers'>Offers</NavLink>
+          <NavLink to='/' className={styles.link}>Home</NavLink>
+          <NavLink to='/shop' className={styles.link}>Shop</NavLink>
+          <NavLink to='/page' className={styles.link}>Page</NavLink>
+          <NavLink to='/services' className={styles.link}>Services</NavLink>
+          <NavLink to='/blog' className={styles.link}>Blog</NavLink>
+          <NavLink to='/contact' className={styles.link}>Contact</NavLink>
+          <NavLink to='/offers' className={styles.link}>Offers</NavLink>
         </div>
         <div className={styles.presentContainer}>
           <Present/>

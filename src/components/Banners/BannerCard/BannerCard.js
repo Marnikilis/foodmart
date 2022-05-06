@@ -8,7 +8,7 @@ const BannerCard = ({item}) => {
          <span> Upto {item.discount}% Off</span>
          <span>{item.title}</span>
          <span>{item.caption}</span>
-         <button className={styles.buyBtn}>
+         <button className={`blackBtn ${styles.buyBtn}`}>
            Shop It
          </button>
        </div>

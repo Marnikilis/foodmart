@@ -5,13 +5,14 @@ import {ReactComponent as ArrowDown} from "./header-icons/arrowDown.svg";
 import {ReactComponent as Search} from "./header-icons/search.svg";
 import {ReactComponent as Favorite} from "./header-icons/favorite.svg";
 import {ReactComponent as User} from "./header-icons/user.svg";
-import {ReactComponent as Logo} from '../../icons/logo.svg';
+import {ReactComponent as Logo} from '../../images/logo.svg';
+import {NavLink} from "react-router-dom";
 
 const Header = () => {
   return (
     <header>
       <div className={`mainContainer ${styles.container}`}>
-          <Logo/>
+          <NavLink to='/'><Logo/></NavLink>
           <div className={styles.searchContainer}>
             <div className={styles.selectContainer}>
               <select>
