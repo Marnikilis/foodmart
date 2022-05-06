@@ -52,7 +52,7 @@ const TopProducts = () => {
         </div>
         <div className={styles.productsContainer}>
           {topProducts.map(product => {
-            return <ProductCard product={product}/>
+            return <ProductCard key={product.img} product={product}/>
           })}
         </div>
       </div>

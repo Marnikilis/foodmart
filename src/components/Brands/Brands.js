@@ -33,7 +33,7 @@ const Brands = () => {
           </div>
           <div className={styles.brandCards}>
             {brands.map(brand =>{
-              return <BrandCard img={brand.img} title={brand.title} caption={brand.caption}/>
+              return <BrandCard key={brand.img} img={brand.img} title={brand.title} caption={brand.caption}/>
             })}
           </div>
         </div>

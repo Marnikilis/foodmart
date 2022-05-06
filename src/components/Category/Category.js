@@ -38,7 +38,7 @@ const Category = () => {
           </div>
           <div className={styles.categoryCards}>
             {categories.map(category => {
-              return <CategoryCard img={category.img} title={category.title}/>
+              return <CategoryCard key={category.img} img={category.img} title={category.title}/>
             })}
           </div>
         </div>

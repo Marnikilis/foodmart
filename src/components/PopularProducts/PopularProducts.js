@@ -16,7 +16,7 @@ const PopularProducts = () => {
         <div className={styles.productsContainer}>
           {products.map(product => {
             return (
-              <div>{product.title}</div>
+              <div key={product.title}>{product.title}</div>
             )
           })}
         </div>

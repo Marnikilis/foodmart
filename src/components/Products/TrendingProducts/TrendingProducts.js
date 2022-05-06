@@ -44,7 +44,7 @@ const TrendingProducts = () => {
         </div>
         <div className={styles.productsContainer}>
           {trendProducts.map(product => {
-            return <ProductCard product={product}/>
+            return <ProductCard key={product.img} product={product}/>
           })}
         </div>
       </div>

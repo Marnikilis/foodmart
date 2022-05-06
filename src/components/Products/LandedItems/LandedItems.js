@@ -30,7 +30,7 @@ const LandedItems = () => {
         </div>
         <div className={styles.productsContainer}>
           {bestSellProducts.map(product => {
-            return <ProductCard product={product}/>
+            return <ProductCard key={product.img} product={product}/>
           })}
         </div>
       </div>

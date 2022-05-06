@@ -13,6 +13,7 @@ import LandedItems from "./components/Products/LandedItems/LandedItems";
 import Articles from "./components/Articles/Articles";
 import FoodMartApp from "./components/FoodMartApp/FoodMartApp";
 import PopularProducts from "./components/PopularProducts/PopularProducts";
+import Services from "./components/Services/Services";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Articles/>
         <FoodMartApp/>
         <PopularProducts/>
+        <Services/>
       </div>
     </div>
   );
