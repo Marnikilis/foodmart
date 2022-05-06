@@ -12,6 +12,7 @@ import BestSellProducts from "./components/Products/BestSellProducts/BestSellPro
 import LandedItems from "./components/Products/LandedItems/LandedItems";
 import Articles from "./components/Articles/Articles";
 import FoodMartApp from "./components/FoodMartApp/FoodMartApp";
+import PopularProducts from "./components/PopularProducts/PopularProducts";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <LandedItems/>
         <Articles/>
         <FoodMartApp/>
+        <PopularProducts/>
       </div>
     </div>
   );
