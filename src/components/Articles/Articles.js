@@ -25,8 +25,8 @@ const Articles = () => {
           </div>
         </div>
         <div className={styles.articlesContainer}>
-          {articles.map(article => {
-            return <Article content={article}/>
+          {articles.map((article,i) => {
+            return <Article key={i} content={article}/>
           })}
         </div>
       </div>
