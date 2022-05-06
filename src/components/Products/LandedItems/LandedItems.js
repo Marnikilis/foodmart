@@ -23,7 +23,7 @@ const LandedItems = () => {
           <div className={'heading'}>Just landed items</div>
           <div className={'buttons'}>
             <div>
-              <button className={'arrowBtn'}>&#60;</button>
+              <button disabled className={'arrowBtn'}>&#60;</button>
               <button className={'arrowBtn'}> &#62;</button>
             </div>
           </div>

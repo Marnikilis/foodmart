@@ -26,7 +26,7 @@ const Brands = () => {
                 </div>
                 <Arrow/></button>
               <div>
-                <button className={'arrowBtn'}>&#60;</button>
+                <button disabled className={'arrowBtn'}>&#60;</button>
                 <button className={'arrowBtn'}> &#62;</button>
               </div>
             </div>
