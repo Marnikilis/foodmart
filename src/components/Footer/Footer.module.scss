@@ -1,30 +1,14 @@
-footer {
-  display: flex;
-  flex-direction: column;
-}
-
 .container {
-  width: 100%;
   border-top: 1px solid #F8F8F8;
   display: flex;
+  flex-direction: column;
   padding-top: 90px;
   border-bottom: 1px solid #F8F8F8;
   justify-content: space-between;
   padding-bottom: 60px;
   position: relative;
-
-  & > * {
-    display: flex;
-    flex-direction: column;
-  }
-
-  span {
-    font-weight: 600;
-    font-size: 24px;
-    text-transform: capitalize;
-    margin-bottom: 13px;
-  }
 }
+
 .leaves{
   position: absolute;
   top: 0;
@@ -33,7 +17,21 @@ footer {
   width: 300px;
   height: 300px;
 }
+.firstFooterContainer{
+  display: flex;
+  gap: 130px;
 
+  & > * {
+    display: flex;
+    flex-direction: column;
+  }
+  span {
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: capitalize;
+    margin-bottom: 13px;
+  }
+}
 .iconsContainer {
   margin-top: 15px;
 }
@@ -82,23 +80,28 @@ footer {
   height: 52px;
   color: #747474;
   line-height: 214%;
+}
+
+.inputContainer{
+  margin-top: 39px;
+  max-width: 366px;
+  height: 100%;
+  width: 100%;
+  display: flex;
 
   input {
-    margin-top: 39px;
     background-color: #F4F4F4;
     height: 100%;
-    width: 250px;
+    width: 100%;
     padding: 0 17px;
   }
 }
-
 .sendBtn {
+  display: flex;
+  align-items: center;
   height: 100%;
   padding: 0 20px;
-
-  & > * {
-    margin-left: 6px;
-  }
+  gap: 6px;
 }
 
 .copyrightContainer {

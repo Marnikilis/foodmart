@@ -22,7 +22,7 @@ function App() {
       <Header/>
       <Navbar/>
       <div className={'wrapper'}>
-        <Billboard/>
+        {/*<Billboard/>*/}
         {/*<Category/>*/}
         {/*<Brands/>*/}
         {/*<TrendingProducts/>*/}
@@ -36,7 +36,7 @@ function App() {
         {/*<PopularProducts/>*/}
         {/*<Services/>*/}
       </div>
-      {/*<Footer/>*/}
+      <Footer/>
     </div>
   );
 }

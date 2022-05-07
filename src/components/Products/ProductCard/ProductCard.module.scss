@@ -23,14 +23,18 @@
 }
 
 .imgContainer{
+  display: flex;
   border-radius: 12px;
   background-color: #F9F9F9;
   text-align: center;
-  height: 235px;
-  width: 270px;
- position: relative;
+  max-height: 235px;
+  max-width: 270px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+
   img{
-    height: 100%;
+    width: 100%;
   }
 }
 

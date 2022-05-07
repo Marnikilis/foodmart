@@ -12,9 +12,10 @@ import {NavLink} from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className={'mainContainer'}>
+    <div className={'mainContainer'}>
       <div className={styles.container}>
         <img src={leaves} className={styles.leaves}/>
+        <div className={styles.firstFooterContainer}>
         <div className={styles.iconsContainer}>
           <Logo/>
           <div className={styles.social}>
@@ -25,7 +26,6 @@ const Footer = () => {
             <div className={styles.iconContainer}><YouTube/></div>
           </div>
         </div>
-
         <div>
           <span>ouick links</span>
           <NavLink to='/' className={styles.link}>Home</NavLink>
@@ -54,19 +54,22 @@ const Footer = () => {
           <span>Our newsletter</span>
           <div className={styles.subscribeContainer}>
             <div>Subscribe to our newsletter to get updates<br/> about our grand offers.</div>
-            <input placeholder='Enter your email-address'/>
-            <button className={`blackBtn ${styles.sendBtn}`}>
-              Send
-              <Arrow/>
-            </button>
+            <div className={styles.inputContainer}>
+              <input placeholder='Enter your email-address'/>
+              <button className={`blackBtn ${styles.sendBtn}`}>
+                Send
+                <Arrow/>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+        </div>
       <div className={styles.copyrightContainer}>
         <div> © 2022 TemplatesJungle. All rights reserved.</div>
         <div>Design by <span>TemplatesJungle</span></div>
       </div>
-    </footer>
+      </div>
+    </div>
   );
 };
 
