@@ -1,22 +1,27 @@
 .container{
+  width: 100%;
   margin: 170px 0;
   background-image: url("./appImg/bgApp.svg");
   background-color: #FFF9EB;
   border-radius: 46px;
-  height: 547px;
   position: relative;
   display: flex;
+  flex-direction: column;
+  min-height: 547px;
+  align-items: center;
+  justify-content: center;
 }
+
 .phone{
-  top: -42px;
-  left: 230px;
+  top: -10%;
+  left: 15%;
   position: absolute;
 }
 .textContainer{
-  flex: 0 1 43%;
+  max-width: 40%;
+  //flex: 0 1 300px;
   margin-left: auto;
-  margin-right: 260px;
-  align-self: center;
+  margin-right: 250px;
 
   &>*{
     margin-bottom: 25px;

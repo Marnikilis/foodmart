@@ -12,9 +12,6 @@ const BannerCard = ({item}) => {
            Shop It
          </button>
        </div>
-      <div>
-      <img src={item.img} alt='Product'/>
-      </div>
     </div>
   );
 };

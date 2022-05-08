@@ -1,4 +1,3 @@
-
 .container{
   width: 100%;
   position: relative;
@@ -19,35 +18,32 @@
   height: 400px;
 }
 .cards{
-  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 190px 0;
-  z-index: 100000;
+  gap: 50px;
 }
 .chocolateCard,
 .muffinsCard{
+  max-width: 784px;
+  width: 100%;
   border-radius: 12px;
-  background-size: cover;
 }
 .chocolateCard{
-  background-image: url("bannersImg/bgChocolate.png");
-  background-color: #FFEADA;
-  margin-right: 50px;
-
-  img{
-    width: 450px;
-    margin-left: -70px;
-    margin-top: -70px;
-  }
+  background: #FFEADA url("bannersImg/bgChocolate.png");
+  background-size: cover;
 }
-.muffinsCard{
-  background-image: url("bannersImg/bgmuff.svg");
-  background-color: #E1F7F9;
 
-  img{
-    width: 700px;
-    margin-left: -250px;
-    margin-top: -30%;
-  }
+.firstBackgroundImage{
+  background: url("bannersImg/chocolate.png") no-repeat 340px;
+  background-size: contain;
+}
+
+.muffinsCard{
+  background: #E1F7F9 url("bannersImg/bgmuff.svg");
+}
+
+.secondBackgroundImage{
+  background: url("bannersImg/muff.png") no-repeat 200px -40px;
+  background-size: contain;
 }

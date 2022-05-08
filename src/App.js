@@ -22,19 +22,19 @@ function App() {
       <Header/>
       <Navbar/>
       <div className={'wrapper'}>
-        {/*<Billboard/>*/}
-        {/*<Category/>*/}
-        {/*<Brands/>*/}
-        {/*<TrendingProducts/>*/}
-        {/*<Banners/>*/}
-        {/*<TopProducts/>*/}
-        {/*<RegisterForm/>*/}
-        {/*<BestSellProducts/>*/}
-        {/*<LandedItems/>*/}
-        {/*<Articles/>*/}
-        {/*<FoodMartApp/>*/}
-        {/*<PopularProducts/>*/}
-        {/*<Services/>*/}
+        <Billboard/>
+        <Category/>
+        <Brands/>
+        <TrendingProducts/>
+        <Banners/>
+        <TopProducts/>
+        <RegisterForm/>
+        <BestSellProducts/>
+        <LandedItems/>
+        <Articles/>
+        <FoodMartApp/>
+        <PopularProducts/>
+        <Services/>
       </div>
       <Footer/>
     </div>
