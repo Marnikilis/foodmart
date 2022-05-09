@@ -10,7 +10,7 @@ import BestSellProducts from "./Products/BestSellProducts/BestSellProducts";
 import LandedItems from "./Products/LandedItems/LandedItems";
 import Articles from "./Articles/Articles";
 import FoodMartApp from "./FoodMartApp/FoodMartApp";
-import PopularProducts from "./PopularProducts/PopularProducts";
+import PopularProducts from "./Products/PopularProducts/PopularProducts";
 import Services from "./Services/Services";
 
 const Main = () => {

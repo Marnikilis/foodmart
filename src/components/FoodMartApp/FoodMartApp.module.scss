@@ -1,3 +1,6 @@
+@import "../../scss/settings";
+@import "../../scss/mixins";
+
 .container{
   width: 100%;
   margin: 170px 0;
@@ -16,10 +19,13 @@
   top: -10%;
   left: 15%;
   position: absolute;
+
+  @include media-max($lg-break){
+    display: none;
+  }
 }
 .textContainer{
   max-width: 40%;
-  //flex: 0 1 300px;
   margin-left: auto;
   margin-right: 250px;
 
@@ -29,6 +35,11 @@
   span{
     color: #555555;
     line-height: 225%;
+  }
+
+  @include media-max($lg-break){
+    max-width: 80%;
+    margin: 0;
   }
 }
 

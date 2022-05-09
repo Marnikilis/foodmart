@@ -1,15 +1,23 @@
+@import "../../scss/settings";
+@import "../../scss/mixins";
+
 header{
-  height: 130px;
+  min-height: 130px;
   border-bottom: 1px solid #F6F6F6;
 }
 
-.container{
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
-}
 
+  @include media-max($lgt-break) {
+    flex-direction: column;
+    align-items: normal;
+    gap: 10px;
+  }
+}
 .firstHeaderContainer{
   flex: 0 1 65%;
   display: flex;
@@ -19,6 +27,10 @@ header{
 .secondHeaderContainer{
   display: flex;
   gap: 70px;
+
+  @include media-max($lgt-break) {
+    align-self: flex-end;
+  }
 }
 
 .searchContainer{

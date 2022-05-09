@@ -1,12 +1,16 @@
+@import "../../scss/settings";
+@import "../../scss/mixins";
+
 .container {
   border-top: 1px solid #F8F8F8;
   display: flex;
   flex-direction: column;
   padding-top: 90px;
-  border-bottom: 1px solid #F8F8F8;
-  justify-content: space-between;
-  padding-bottom: 60px;
   position: relative;
+
+  @include media-max($lg-break){
+    padding: 0 60px;
+  }
 }
 
 .leaves{
@@ -19,17 +23,27 @@
 }
 .firstFooterContainer{
   display: flex;
-  gap: 130px;
-
+  border-bottom: 1px solid #F8F8F8;
+  padding-bottom: 20px;
   & > * {
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
+
+    &:not(:last-child){
+      margin-right: 130px;
+    }
   }
   span {
     font-weight: 600;
     font-size: 24px;
     text-transform: capitalize;
     margin-bottom: 13px;
+  }
+
+  @include media-max($lgt-break){
+    flex-wrap: wrap;
+    margin-bottom: 70px;
   }
 }
 .iconsContainer {
@@ -107,7 +121,7 @@
 .copyrightContainer {
   display: flex;
   justify-content: space-between;
-  margin: 43px 0 50px 0;
+  margin: 40px 0;
   color: #747474;
 
   span {

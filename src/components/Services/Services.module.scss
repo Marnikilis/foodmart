@@ -1,8 +1,15 @@
+@import "../../scss/settings";
+@import "../../scss/mixins";
+
 .container {
   display: flex;
   padding: 178px 0 90px;
   gap: 55px;
   position: relative;
+
+  @include media-max($lgt-break){
+    flex-wrap: wrap;
+  }
 }
 
 .bgDots {

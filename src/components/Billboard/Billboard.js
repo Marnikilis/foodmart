@@ -16,13 +16,10 @@ const Billboard = () => {
                 Best selling summer juice with natural extracts.
               </div>
               <button className={styles.shopBtn}>shop now</button>
+              <div className={styles.dots}>
+                <span/>
+              </div>
             </div>
-            {/*<div>*/}
-            {/*  <img src={bottle} className={styles.bottleImg}/>*/}
-            {/*</div>*/}
-            {/*<div className={styles.dots}>*/}
-            {/*  <span/>*/}
-            {/*</div>*/}
           </div>
           <div className={styles.secondCardsContainer}>
             <div className={styles.fruitsCard}>

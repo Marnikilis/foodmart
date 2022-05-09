@@ -2,26 +2,23 @@
 @import '../../scss/settings';
 
 
-.wrapperContainer{
-  display: flex;
-  justify-content: center;
-}
-
 .container{
+  padding: 100px 170px;
   background-color: #E9F3F8;
   border-radius: 16px;
-  height: 678px;;
+  max-height: 678px;;
   display: flex;
-  margin-bottom: 170px;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
   overflow: hidden;
+  margin-bottom: 160px;
 
 
   form{
     display: flex;
     flex: 0 1 38%;
     flex-direction: column;
-    margin: 130px 200px 0 0;
 
 
     input{
@@ -36,6 +33,13 @@
     label{
       margin-bottom: 10px;
     }
+    @include media-max($lgt-break){
+      padding: 60px;
+    }
+  }
+  @include media-max($lg-break){
+    padding: 40px;
+    justify-content: center;
   }
 }
 .leavesTop{
@@ -56,11 +60,9 @@
   transform: scaleX(-1) rotate(210deg);
 }
 .textContainer{
-  padding: 130px 160px 0 270px;
   display: flex;
   flex-direction: column;
-  flex: 0 1 30%;
-
+  flex: 0 1 40%;
 
   span{
     &:nth-child(1){

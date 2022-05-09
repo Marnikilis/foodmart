@@ -8,29 +8,53 @@
 
 .container{
   width: 100%;
-  margin: 170px 0;
+  padding: 107px 0;
   display: flex;
-  justify-content: center
+  justify-content: center;
+
+  @include media-max($lgt-break){
+   flex-direction: column;
+    //align-items: center;
+    gap: 30px;
+  }
 }
 
 .firstCardContainer{
-  background: #E6F3FA url("./billboardSvg/bottle.png") no-repeat right bottom;
+  background: #E6F3FA url("billboardSvg/bottle.png") no-repeat right bottom;
   background-size: contain;
   display: flex;
   border-radius: 12px;
   margin-right: 30px;
   flex: 0 1 60%;
+
+  @include media-max($lgt-break){
+    margin-right: 0;
+  }
+}
+.shopNowCard{
+  display: flex;
+  flex-direction: column;
+  padding: 110px 30px 40px 110px;
+
+  @include media-max($lgt-break){
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 
+
 .dots{
-  height: 16px;
-  width: 64px;
+  margin-top: 70px;
+  position: relative;
+  display: flex;
+  align-self: flex-end ;
+  width: 100px;
 
   span{
-    position: absolute;
+    position: relative;
     background-color: #FFFFFF;
-    height: 100%;
-    width: 25%;
+    height: 16px;
+    width: 16px;
     border-radius: 50%;
 
     &:before,
@@ -53,11 +77,7 @@
     }
   }
 }
-.shopNowCard{
-  display: flex;
-  flex-direction: column;
-  padding: 110px 30px 0 120px;
-}
+
 
 .text{
   font-family: $caption-font;
@@ -101,6 +121,11 @@
   justify-content: space-between;
   gap: 30px;
   flex: 0 1 40%;
+
+  @include media-max($lgt-break){
+    flex-direction: row;
+    width: 100%;
+  }
 }
 .fruitsCard,
 .bakeCard{
@@ -108,6 +133,7 @@
   display: flex;
   border-radius: 12px;
   padding: 55px;
+  flex: 1;
 }
 .fruitsCard{
   background: #EEF5E4 url("./billboardSvg/fruits.png") no-repeat right bottom;

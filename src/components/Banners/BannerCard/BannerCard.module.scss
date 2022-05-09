@@ -4,13 +4,13 @@
 .container{
   display: flex;
   padding: 65px;
-  width: 60%;
-  max-width: 350px;
 }
 
 .textContainer{
   display: flex;
   flex-direction: column;
+  text-shadow: 2px 1px 1px white;
+
 
   span{
     &:nth-child(1){
@@ -27,6 +27,7 @@
     &:nth-child(3){
       color: #777777;
       line-height: 190%;
+      width: 70%;
     }
   }
 }

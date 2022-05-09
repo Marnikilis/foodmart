@@ -5,11 +5,13 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 170px;
+  width: 100%;
 }
 
 .productsContainer{
-  display: flex;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
 }
 
 .expiresContainer{
