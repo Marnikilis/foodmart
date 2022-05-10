@@ -32,7 +32,7 @@ const TrendingProducts = () => {
       <div className={styles.container}>
         <div className={styles.productsNav}>
           <div className={'heading'}>Trending Products</div>
-          <div>
+          <div className={styles.navigation}>
             <NavLink to='/all' className={styles.link} data='All'>All</NavLink>
             <NavLink to='/fruits&' className={styles.link} data='Fruits & Veges'>Fruits & Veges</NavLink>
             <NavLink to='/juicesVeges' className={styles.link} data='Juices'>Juices</NavLink>

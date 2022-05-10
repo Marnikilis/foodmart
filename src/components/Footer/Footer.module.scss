@@ -9,7 +9,7 @@
   position: relative;
 
   @include media-max($lg-break){
-    padding: 0 60px;
+    padding:60px;
   }
 }
 
@@ -28,7 +28,7 @@
   & > * {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 
     &:not(:last-child){
       margin-right: 130px;

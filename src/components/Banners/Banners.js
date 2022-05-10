@@ -21,13 +21,15 @@ const Banners = () => {
          <img src={leavesBottom} className={styles.leavesBottom}/>
          <div className={styles.cards}>
          <div className={styles.chocolateCard}>
-           <div className={styles.firstBackgroundImage}>
              <BannerCard item={discountProducts[0]}/>
+           <div className={styles.imageContainer}>
+             <div className={styles.firstBackgroundImage}/>
            </div>
          </div>
          <div className={styles.muffinsCard}>
-           <div className={styles.secondBackgroundImage}>
            <BannerCard item={discountProducts[1]}/>
+           <div className={styles.imageContainer}>
+             <div className={styles.secondBackgroundImage}/>
            </div>
          </div>
          </div>

@@ -7,7 +7,7 @@ import {NavLink} from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav id="open">
       <div className={`mainContainer ${styles.container}`}>
         <div className={styles.firstNavContainer}>
           <div className={styles.selectContainer}>
@@ -26,9 +26,15 @@ const Navbar = () => {
             <NavLink to='/offers' className={styles.link}>Offers</NavLink>
           </div>
         </div>
+        <div className={styles.secondNavContainer}>
         <div className={styles.presentContainer}>
           <Present/>
           <span>Get your coupon code</span>
+        </div>
+        <div className={styles.menu}>
+          <a href='#open' className={styles.menuOpen}/>
+          <a href='#close' className={styles.menuClose}/>
+        </div>
         </div>
       </div>
     </nav>

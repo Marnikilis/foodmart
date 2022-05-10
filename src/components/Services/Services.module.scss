@@ -3,9 +3,9 @@
 
 .container {
   display: flex;
-  padding: 178px 0 90px;
   gap: 55px;
   position: relative;
+  margin-bottom: 90px;
 
   @include media-max($lgt-break){
     flex-wrap: wrap;

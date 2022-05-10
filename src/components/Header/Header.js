@@ -10,7 +10,7 @@ import {NavLink} from "react-router-dom";
 
 const Header = () => {
   return (
-    <header>
+    <header id="close">
       <div className={`mainContainer ${styles.container}`}>
         <div className={styles.firstHeaderContainer}>
           <NavLink to='/'><Logo/></NavLink>
@@ -22,7 +22,9 @@ const Header = () => {
               <ArrowDown className={styles.arrow}/>
             </div>
             <div className={styles.searchInput}>
-              <input placeholder='Search for more than 20,000 products'/>
+              <input
+                placeholder='Search for more than 20,000 products'
+              />
               <Search/>
             </div>
           </div>

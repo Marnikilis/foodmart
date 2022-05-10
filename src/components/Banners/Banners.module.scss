@@ -21,48 +21,44 @@
   height: 400px;
 }
 .cards{
+  position: relative;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 190px 0;
   gap: 50px;
-
-  @include media-max($lgt-break){
-    flex-direction: column;
-    align-items: normal;
-    padding: 190px;
-  }
-  @include media-max($lg-break){
-    flex-direction: column;
-    align-items: normal;
-    padding: 190px 100px;
-  }
 }
 .chocolateCard,
 .muffinsCard{
+  display: flex;
   flex: 0 1 50%;
   border-radius: 12px;
-
-  @include media-max($lgt-break){
-    flex: 1 0 100%;
-  }
+  padding: 50px 0;
+  align-items: center;
+  align-self: stretch;
 }
 .chocolateCard{
-  background: #FFEADA url("bannersImg/bgChocolate.png") right center;
+  background: #FFEADA url("bannersImg/bgChocolate.png");
   background-size: cover;
-
 }
-
-.firstBackgroundImage{
-  background: url("bannersImg/chocolate.png") no-repeat right bottom;
-  background-size: contain;
-}
-
 .muffinsCard{
   background: #E1F7F9 url("bannersImg/bgmuff.svg");
 }
 
-.secondBackgroundImage{
-  background: url("bannersImg/muff.png") no-repeat right center;
+.imageContainer{
+  max-width: 350px;
+  width: 100%;
+  height: 100%;
+}
+.firstBackgroundImage{
+  background: url("bannersImg/chocolate.png") no-repeat left center;
   background-size: contain;
+  height: 100%;
+}
+
+.secondBackgroundImage{
+  background: url("bannersImg/muff.png") no-repeat left center;
+  background-size: contain;
+  height: 100%;
 }

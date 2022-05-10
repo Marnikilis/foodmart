@@ -2,7 +2,7 @@
 @import "../../scss/mixins";
 
 header{
-  min-height: 130px;
+  height: 130px;
   border-bottom: 1px solid #F6F6F6;
 }
 
@@ -12,11 +12,11 @@ header{
   align-items: center;
   height: 100%;
 
-  @include media-max($lgt-break) {
-    flex-direction: column;
-    align-items: normal;
-    gap: 10px;
-  }
+  //@include media-max($lgt-break) {
+  //  //flex-direction: column;
+  //  align-items: normal;
+  //  gap: 10px;
+  //}
 }
 .firstHeaderContainer{
   flex: 0 1 65%;
@@ -28,9 +28,9 @@ header{
   display: flex;
   gap: 70px;
 
-  @include media-max($lgt-break) {
-    align-self: flex-end;
-  }
+  //@include media-max($lgt-break) {
+  //  align-self: flex-end;
+  //}
 }
 
 .searchContainer{
@@ -73,6 +73,7 @@ header{
     caret-color: #DEDEDE;
     margin-right: 5px;
     &::placeholder{
+      content: 'ugugugug';
       padding: 0 20px;
     }
   }
@@ -84,7 +85,11 @@ header{
   flex-direction: column;
   align-items: flex-end;
 }
-
+.supportContainer{
+  @include media-max($lg-break) {
+    display: none;
+  }
+}
 .cartContainer{
   align-items: flex-start;
 }

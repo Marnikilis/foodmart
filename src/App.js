@@ -4,13 +4,15 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Main from "./components/Main";
 
+
 function App() {
   return (
     <div className="App">
       <Header/>
       <Navbar/>
       <div className={'wrapper'}>
-        <Main/>
+       <Main/>
+        {/*<Articles/>*/}
       </div>
       <Footer/>
     </div>

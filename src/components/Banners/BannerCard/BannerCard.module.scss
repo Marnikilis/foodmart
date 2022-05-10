@@ -3,7 +3,7 @@
 
 .container{
   display: flex;
-  padding: 65px;
+  padding-left: 45px;
 }
 
 .textContainer{
@@ -27,7 +27,6 @@
     &:nth-child(3){
       color: #777777;
       line-height: 190%;
-      width: 70%;
     }
   }
 }
