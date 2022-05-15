@@ -1,15 +1,18 @@
+@import "../../scss/settings";
+@import "../../scss/mixins";
 .container{
   width: 100%;
-  margin-bottom: 170px;
+  margin-bottom: 110px;
+  overflow: hidden;
+}
+
+.carouselContainer{
+  margin-left: -10px;
 }
 
 .brandCards{
+  padding: 60px 0;
   display: flex;
   justify-content: space-between;
-
-  &>*{
-    &:not(:last-child){
-      margin-right: 35px;
-    }
-  }
+  transition: $transition;
 }

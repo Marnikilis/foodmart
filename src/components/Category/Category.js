@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import styles from './Category.module.scss';
-import {ReactComponent as Arrow} from './categorySvg/smallArrow.svg';
+import {ReactComponent as ArrowRight} from './categorySvg/smallArrow.svg';
+import {ReactComponent as Arrow} from '../../images/arrow.svg';
 import broccoli from './categorySvg/broccli.svg';
 import bread from './categorySvg/bread.svg';
 import wine from './categorySvg/wine.svg';
@@ -8,8 +9,15 @@ import oil from './categorySvg/oil.svg';
 import meat from './categorySvg/meat.svg';
 import herbs from './categorySvg/herbs.svg';
 import CategoryCard from "./CategoryCard/CategoryCard";
+import {useCarousel} from '../../hooks/useCarousel';
 
 const categories = [
+  {img: broccoli, title: 'Fruits & Veges'},
+  {img: bread, title: 'Breads & Sweets'},
+  {img: wine, title: 'Wine Drinks'},
+  {img: oil, title: 'Oil & Ghee'},
+  {img: meat, title: 'Raw Meat'},
+  {img: herbs, title: 'Natural Herbs'},
   {img: broccoli, title: 'Fruits & Veges'},
   {img: bread, title: 'Breads & Sweets'},
   {img: wine, title: 'Wine Drinks'},
@@ -19,30 +27,42 @@ const categories = [
 ];
 
 const Category = () => {
+  const cardsRef = useRef();
+  const carouselRef= useRef();
+
+  const {nextCardHandler, prevCardHandler, nextDisabled, prevDisabled} = useCarousel({items:categories, ref: cardsRef, slider:carouselRef});
+
   return (
-      <div className={'mainContainer'}>
-        <div className={styles.container}>
-          <div className={'headingContainer'}>
-            <div className={'heading'}>Category</div>
-            <div className={'buttons'}>
-              <button>
-                <div className={'btnText'}>
-                  View All Categories
-                </div>
-                <Arrow/></button>
-              <div>
-                <button disabled className={'arrowBtn'}>&#60;</button>
-                <button className={'arrowBtn'}> &#62;</button>
+    <div  className={'mainContainer'}>
+      <div className={styles.container}>
+        <div className={'headingContainer'}>
+          <div className={'heading'}>Category</div>
+          <div className={'buttons'}>
+            <button>
+              <div className={'btnText'}>
+                View All Categories
               </div>
+              <ArrowRight/>
+            </button>
+            <div>
+              <button  disabled={prevDisabled} onClick={prevCardHandler} className={'arrowBtn'}>
+                <Arrow className={'prevBtn'}/>
+              </button>
+              <button disabled={nextDisabled} onClick={nextCardHandler} className={'arrowBtn'}>
+                <Arrow />
+              </button>
             </div>
           </div>
-          <div className={styles.categoryCards}>
-            {categories.map((category, i) => {
-              return <CategoryCard key={i} img={category.img} title={category.title}/>
-            })}
-          </div>
+        </div>
+        <div ref={carouselRef} className={styles.carouselContainer}>
+        <div ref={cardsRef} className={styles.categoryCards}>
+          {categories.map((category, i) => {
+            return <CategoryCard  key={i} img={category.img} title={category.title}/>
+          })}
+        </div>
         </div>
       </div>
+    </div>
   );
 };
 

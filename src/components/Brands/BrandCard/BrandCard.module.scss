@@ -1,4 +1,8 @@
 .brandCardContainer{
+  padding: 0 10px;
+  flex: 0 0 340px;
+}
+.brandCardContent{
   padding: 16px;
   background: #FFFFFF;
   border: 1px solid #FBFBFB;
@@ -8,7 +12,7 @@
   align-items: center;
 
   img{
-    width: 100%;
+    width: 150px;
   }
 }
 

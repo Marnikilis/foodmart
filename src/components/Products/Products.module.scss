@@ -4,14 +4,25 @@
 .container{
   display: flex;
   flex-direction: column;
-  margin-bottom: 170px;
+  margin-bottom: 110px;
   width: 100%;
+  overflow: hidden;
+}
+.carouselContainer{
+  margin-left: -15px;
+  transition: $transition;
 }
 
 .productsContainer{
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 25px;
+  padding-bottom: 60px;
+  display: flex;
+  overflow: hidden;
+  transition: all 0.5s;
+
+  &>*{
+    flex: 1 0 260px;
+    padding: 0 15px;
+  }
 }
 
 .expiresContainer{
@@ -22,11 +33,14 @@
   align-items: center;
   background-color: #FFC43F;
   border-radius: 4px;
-  padding: 5px 15px;
   font-size: 16px;
   font-family: $main-font;
 
   &>*{
     margin-right: 8px;
+  }
+
+  @include media-max($sm-break){
+    display: none;
   }
 }

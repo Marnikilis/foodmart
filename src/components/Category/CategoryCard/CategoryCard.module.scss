@@ -1,14 +1,21 @@
+@import "../../../scss/settings";
+@import "../../../scss/mixins";
+
 .cardContainer{
+  padding: 0 9px;
+  flex: 0 0 220px;
+}
+
+.cardContent{
   background: #FFFFFF;
   border: 1px solid #FBFBFB;
   box-shadow: 0 5px 22px rgba(0, 0, 0, 0.04);
   border-radius: 16px;
-  padding: 75px 30px;
+  padding: 75px 0;
   display: flex;
-  flex: 0 1 100%;
+  flex: 0 0 220px;
   flex-direction: column;
   align-items: center;
-
 
   &:hover{
     box-shadow: 0 21px 44px rgba(0, 0, 0, 0.08);

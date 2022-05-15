@@ -41,6 +41,9 @@
     max-width: 80%;
     margin: 0;
   }
+  @include media-max($l-break) {
+    padding: 40px 30px;
+  }
 }
 
 .downloadLinks{

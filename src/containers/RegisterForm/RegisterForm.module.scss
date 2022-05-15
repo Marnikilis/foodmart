@@ -2,45 +2,50 @@
 @import '../../scss/settings';
 
 
-.container{
+.container {
   padding: 100px 170px;
   background-color: #E9F3F8;
   border-radius: 16px;
-  max-height: 678px;;
   display: flex;
+  gap: 150px;
   justify-content: space-between;
   position: relative;
   overflow: hidden;
   margin-bottom: 160px;
 
-
-  form{
+  form {
     display: flex;
     flex-direction: column;
+    flex: 1 1 30%;
 
-
-    input{
-      width: 80%;
+    input {
       background-color: #FFFFFF;
       padding: 0 13px;
 
-      &::placeholder{
+      &::placeholder {
         color: #A9A9A9;
       }
     }
-    label{
+
+    label {
       margin-bottom: 10px;
     }
-    @include media-max($lgt-break){
-      padding: 0 60px;
-    }
   }
-  @include media-max($lg-break){
+
+  @include media-max($lg-break) {
     padding: 75px;
     justify-content: center;
   }
+  @include media-max($sm-break) {
+    flex-direction: column;
+    gap: 10px;
+  }
+  @include media-max($l-break) {
+    padding: 40px 30px;
+  }
 }
-.leavesTop{
+
+.leavesTop {
   position: absolute;
   bottom: -80px;
   left: -40px;
@@ -49,7 +54,8 @@
   z-index: 10;
   transform: rotate(-28deg);
 }
-.leavesBottom{
+
+.leavesBottom {
   position: absolute;
   top: -10px;
   right: -20px;
@@ -57,40 +63,50 @@
   height: 300px;
   transform: scaleX(-1) rotate(210deg);
 }
-.textContainer{
+
+.textContainer {
   display: flex;
   flex-direction: column;
   flex: 0 1 40%;
 
-  span{
-    &:nth-child(1){
-    font-family: $heading-font;
+  span {
+    &:nth-child(1) {
+      font-family: $heading-font;
       font-size: 50px;
       line-height: 70px;
       text-transform: capitalize;
       margin-bottom: 20px;
 
-      span{
+      span {
         color: #FFC43F;
       }
-  }
-    &:nth-child(2){
+
+      @include media-max($xs-break){
+        font-size: 26px;
+      }
+    }
+
+    &:nth-child(2) {
       font-size: 18px;
       color: #555555;
       line-height: 225%;
-  }
+
+      @include media-max($sm-break) {
+        display: none;
+      }
+    }
   }
 }
 
-.formInput{
+.formInput {
   background-color: #FFFFFF;
   border-radius: 10px;
   padding: 15px 20px;
   margin-bottom: 25px;
 }
 
-.registerBtn{
+.registerBtn {
   margin-top: 20px;
   border-radius: 10px;
-  padding: 16px 188px;
+  padding: 16px 0;
 }

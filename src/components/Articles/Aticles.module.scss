@@ -17,4 +17,9 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  @include media-max($xs-break){
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

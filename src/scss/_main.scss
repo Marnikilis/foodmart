@@ -22,6 +22,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   height: 100%;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -55,11 +56,10 @@ button {
   margin-right: 8px;
 }
 .arrowBtn{
+  height: 38px;
+  width: 38px;
   background-color: #FFC43F;
   border-radius: 10px;
-  font-weight: 600;
-  font-size: 20px;
-  padding: 6px 14px;
   margin-left: 13px;
   transition: all 0.5s;
 
@@ -67,7 +67,9 @@ button {
     background-color: #F1F1F1;
   }
 }
-
+.prevBtn{
+  transform: rotate(180deg);
+}
 .blackBtn{
   background-color: #222222;
   color: #FFFFFF;
@@ -94,8 +96,15 @@ input {
 .heading{
   font-family: $heading-font;
   font-size: 36px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   text-transform: capitalize;
+
+  @include media-max($sm-break){
+    margin-bottom: 30px;
+  }
+  @include media-max($xs-break){
+   font-size: 26px;
+  }
 }
 .headingContainer{
   position: relative;
@@ -103,4 +112,15 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include media-max($xs-break){
+  //flex-direction: column;
+    align-items: normal;
+    margin-bottom: 10px;
+
+    &>*{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }

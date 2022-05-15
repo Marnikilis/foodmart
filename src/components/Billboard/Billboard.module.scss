@@ -92,6 +92,10 @@
   line-height: 68px;
   margin-bottom: 25px;
   text-shadow: 2px 1px 1px white;
+
+  @include media-max($xs-break){
+    font-size: 30px;
+  }
 }
 
 .afterTitleText{
@@ -127,6 +131,9 @@
   @include media-max($lgt-break){
     flex-direction: row;
     width: 100%;
+  }
+  @include media-max($xs-break){
+   display: none;
   }
 }
 .fruitsCard,

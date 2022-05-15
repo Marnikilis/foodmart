@@ -1,11 +1,18 @@
+@import "../../scss/settings";
+@import "../../scss/mixins";
+
 .container{
   width: 100%;
-  margin-bottom: 160px;
+  margin-bottom: 100px;
+  overflow: hidden;
+}
+.carouselContainer{
+  margin-left: -9px;
 }
 
 .categoryCards{
+  padding: 60px 0;
   display: flex;
-  width: 100%;
   justify-content: space-between;
-  gap:20px;
+  transition: $transition;
 }

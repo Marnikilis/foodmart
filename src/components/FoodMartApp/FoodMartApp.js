@@ -11,7 +11,7 @@ const FoodMartApp = () => {
       <div className={styles.container}>
         <img className={styles.phone} src={phone} alt='Phone'/>
         <div className={styles.textContainer}>
-          <div className={'heading'}>Shop faster with foodmart App </div>
+          <div className={'heading'}>Shop faster with foodmart App</div>
           <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sed ptibus
           liberolectus nonet psryroin. Amet sed lorem posuere sit iaculis amet, ac urna.
           Adipiscing fames semper erat ac in suspendisse iaculis. Amet blandit tortor
@@ -22,7 +22,7 @@ const FoodMartApp = () => {
             <AppStore/>
           </div>
         </div>
-         </div>
+      </div>
     </div>
   );
 };
