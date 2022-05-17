@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './CarsSaleItem.module.scss';
+import styles from './CardSaleItem.module.scss';
 import {ReactComponent as ArrowRight} from './arrowRight.svg';
 
 
@@ -12,8 +12,8 @@ const CardSaleItem = ({discount, title}) => {
       <button className={styles.categoryText}>
         <span>shop the category</span>
         <ArrowRight/>
-        </button>
-      </div>
+      </button>
+    </div>
   );
 };
 
