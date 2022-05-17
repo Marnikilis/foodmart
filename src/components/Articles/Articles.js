@@ -1,5 +1,5 @@
 import React from 'react';
-import {ReactComponent as Arrow} from "../Category/categorySvg/smallArrow.svg";
+import {ReactComponent as ArrowRight} from "../Category/categorySvg/smallArrow.svg";
 import fruits from './articlesImg/fruits.png';
 import veg from './articlesImg/veg.png';
 import cashew from './articlesImg/cashew.png';
@@ -17,17 +17,18 @@ const Articles = () => {
     <div className={'mainContainer'}>
       <div className={styles.container}>
         <div className={'headingContainer'}>
-          <div className={'heading'}>our latest articles</div>
-          <div className={'buttons'}>
-            <button>
+          <div className={'firstHeadingContainer'}>
+            <div className={'heading'}>our latest articles</div>
+            <button className={'btnAll'}>
               <div className={'btnText'}>
                 Read all articles
               </div>
-              <Arrow/></button>
+              <ArrowRight/>
+            </button>
           </div>
         </div>
         <div className={styles.articlesContainer}>
-          {articles.map((article,i) => {
+          {articles.map((article, i) => {
             return <Article key={i} content={article}/>
           })}
         </div>
