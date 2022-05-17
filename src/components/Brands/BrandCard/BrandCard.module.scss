@@ -1,8 +1,9 @@
-.brandCardContainer{
+.brandCardContainer {
   padding: 0 10px;
   flex: 0 0 340px;
 }
-.brandCardContent{
+
+.brandCardContent {
   padding: 16px;
   background: #FFFFFF;
   border: 1px solid #FBFBFB;
@@ -11,12 +12,12 @@
   display: flex;
   align-items: center;
 
-  img{
+  img {
     width: 150px;
   }
 }
 
-.text{
+.text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,7 +27,7 @@
   line-height: 162%;
   font-size: 17px;
 
-  span{
+  span {
     color: #C7C7C7;
     margin-bottom: 10px;
     font-size: 14px;
