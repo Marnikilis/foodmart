@@ -1,31 +1,36 @@
 @import '../../scss/mixins';
 @import '../../scss/settings';
 
-.container{
+.container {
   display: flex;
   flex-direction: column;
   margin-bottom: 110px;
   width: 100%;
   overflow: hidden;
+
+  @include media-max($sm-break) {
+    margin-bottom: 70px;
+  }
 }
-.carouselContainer{
+
+.carouselContainer {
   margin-left: -15px;
   transition: $transition;
 }
 
-.productsContainer{
+.productsContainer {
   padding-bottom: 60px;
   display: flex;
   overflow: hidden;
   transition: all 0.5s;
 
-  &>*{
+  & > * {
     flex: 1 0 260px;
     padding: 0 15px;
   }
 }
 
-.expiresContainer{
+.expiresContainer {
   align-self: flex-start;
   margin-top: 10px;
   margin-left: 90px;
@@ -36,11 +41,11 @@
   font-size: 16px;
   font-family: $main-font;
 
-  &>*{
+  & > * {
     margin-right: 8px;
   }
 
-  @include media-max($sm-break){
+  @include media-max($sm-break) {
     display: none;
   }
 }

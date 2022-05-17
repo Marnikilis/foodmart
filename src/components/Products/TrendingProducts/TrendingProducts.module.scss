@@ -1,12 +1,13 @@
 @import "../../../scss/settings";
 @import "../../../scss/mixins";
 
-.container{
+.container {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.productsNav{
+
+.productsNav {
   height: 55px;
   width: 100%;
   border-bottom: 2px solid #F6F6F6;
@@ -14,15 +15,25 @@
   align-items: center;
   justify-content: space-between;
 
-  @include media-max($lg-break){
+  @include media-max($lg-break) {
     flex-direction: column;
     align-items: flex-start;
   }
+  @include media-max($xs-break) {
+    height: 45px;
+  }
 }
-.navigation{
+
+.navigation {
   display: flex;
 
-  @include media-max($sm-break){
+  & > * {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  @include media-max($sm-break) {
     flex-wrap: wrap;
   }
 }
@@ -33,36 +44,39 @@
   color: #666666;
   text-transform: uppercase;
   font-weight: 600;
-  margin-left: 30px;
   animation: all 0.5s;
   padding: 18px 0;
 
-  &:global{
+  &:global {
     &.active {
       color: #222222;
       border-bottom: 3px solid #FFC43F;
 
-      @include media-max($lg-break){
+      @include media-max($lg-break) {
         border-bottom: none;
       }
     }
   }
+
+  @include media-max($l-break) {
+    font-size: 14px;
+  }
 }
 
-.productsContainer{
+.productsContainer {
   margin-top: 60px;
   gap: 28px;
   display: grid;
-  grid-template-rows: repeat(auto-fill,minmax(400px, 1fr));
-  grid-template-columns: repeat(auto-fill,minmax(255px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
 
-  @include media-max($lg-break){
+  @include media-max($lg-break) {
     margin-top: 100px;
   }
-  @include media-max($sm-break){
+  @include media-max($sm-break) {
     margin-top: 150px;
   }
-  @include media-max($l-break){
-    margin-top: 250px;
+  @include media-max($l-break) {
+    margin-top: 180px;
   }
 }
