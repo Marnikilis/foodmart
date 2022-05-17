@@ -8,9 +8,13 @@
   flex-direction: column;
   padding-top: 90px;
   position: relative;
+
+  @include media-max($sm-break) {
+    padding-top: 40px;
+  }
 }
 
-.leaves{
+.leaves {
   position: absolute;
   top: 0;
   transform: scaleX(-1);
@@ -19,7 +23,7 @@
   height: 300px;
 }
 
-.firstFooterContainer{
+.firstFooterContainer {
   display: flex;
   border-bottom: 1px solid #F8F8F8;
   padding-bottom: 20px;
@@ -30,14 +34,14 @@
     flex-direction: column;
     margin-bottom: 50px;
 
-    &:not(:last-child){
-      //margin-right: 130px;
+    &:not(:last-child) {
 
-      @include media-max($xs-break){
+      @include media-max($xs-break) {
         margin-right: 0;
       }
     }
   }
+
   span {
     font-weight: 600;
     font-size: 24px;
@@ -45,15 +49,16 @@
     margin-bottom: 13px;
   }
 
-  @include media-max($lgt-break){
+  @include media-max($lgt-break) {
     flex-wrap: wrap;
     margin-bottom: 70px;
   }
-  @include media-max($xs-break){
-   flex-direction: column;
+  @include media-max($xs-break) {
+    flex-direction: column;
     gap: 5px;
   }
 }
+
 .iconsContainer {
   margin-top: 15px;
 }
@@ -90,14 +95,18 @@
   }
 }
 
-.linksContainer{
- display: flex;
+.linksContainer {
+  display: flex;
   flex-direction: row;
   gap: 110px;
 
-  &>*{
+  & > * {
     display: flex;
     flex-direction: column;
+  }
+
+  @include media-max($xs-break) {
+    gap: 60px;
   }
 }
 
@@ -115,7 +124,7 @@
   line-height: 214%;
 }
 
-.inputContainer{
+.inputContainer {
   margin-top: 39px;
   max-width: 366px;
   height: 100%;
@@ -129,6 +138,7 @@
     padding: 0 14px;
   }
 }
+
 .sendBtn {
   display: flex;
   align-items: center;
@@ -147,7 +157,7 @@
     font-weight: 700;
   }
 
-  @include media-max($xs-break){
+  @include media-max($xs-break) {
     flex-direction: column;
     gap: 10px;
   }
