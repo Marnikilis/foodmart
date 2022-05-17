@@ -1,10 +1,10 @@
 @import "../../../scss/settings";
 @import "../../../scss/mixins";
 
-.menuToggle{
+.menuToggle {
   display: none;
   position: absolute;
-  top: 50%;
+  top: 170px;
   right: 20px;
   cursor: pointer;
   height: 2px;
@@ -13,21 +13,26 @@
   z-index: 5000;
   transition: all .5s;
 
-  &:hover{
+  &:hover {
     opacity: 0.7;
   }
-  @include media-max($lg-break){
+
+  @include media-max($lg-break) {
     display: flex;
+  }
+  @include media-max($sm-break) {
+    top: 40px;
   }
 }
 
-.menuToggle.open{
-  top: -80px;
+.menuToggle.open {
+  top: 55px;
+  right: 40px;
 }
 
-.menuOpen{
+.menuOpen {
   &:before,
-  &:after{
+  &:after {
     content: '';
     position: absolute;
     height: 100%;
@@ -35,17 +40,19 @@
     background-color: #222222;
   }
 
-  &:before{
+  &:before {
     transform: translateY(-0.5rem);
   }
-  &:after{
+
+  &:after {
     transform: translateY(0.5rem);
   }
 }
-.menuClose{
+
+.menuClose {
   transform: rotate(45deg);
 
-  &:before{
+  &:before {
     content: '';
     position: absolute;
     height: 100%;
@@ -53,7 +60,7 @@
     background-color: #222222;
   }
 
-  &:before{
+  &:before {
     transform: rotate(90deg);
   }
 }
