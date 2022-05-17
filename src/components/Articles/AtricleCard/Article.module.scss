@@ -1,7 +1,7 @@
 @import '../../../scss/mixins';
 @import '../../../scss/settings';
 
-.container{
+.container {
   display: flex;
   flex-direction: column;
   padding: 25px;
@@ -9,8 +9,19 @@
   border: 1px solid #FBFBFB;
   box-shadow: 0 5px 22px rgba(0, 0, 0, 0.04);
   border-radius: 16px;
+
+  @include media-max($lg-break) {
+    padding: 10px;
+  }
+  @include media-max($l-break) {
+    padding: 5px;
+  }
+  @include media-max($xxs-break) {
+    padding: 0;
+  }
 }
-.imageContainer{
+
+.imageContainer {
   justify-content: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,36 +30,57 @@
   text-align: center;
   flex: 0 1 365px;
   position: relative;
+
+  @include media-max($lg-break) {
+    flex: 1 1 250px;
+  }
+  @include media-max($sm-break) {
+    flex: 0 1 365px;
+  }
+  @include media-max($xs-break) {
+    flex: 0 1 300px;
+  }
 }
 
-.dataContainer{
+.dataContainer {
   margin-top: 23px;
   display: flex;
   font-size: 13px;
   color: #9D9D9D;
 
-  &>*{
+  & > * {
     margin-left: 10px;
 
-    &:not(:last-child){
+    &:not(:last-child) {
       padding-right: 10px;
       border-right: 1px solid #DEDEDE;
     }
   }
-  span{
+
+  span {
     margin-left: 5px;
   }
 }
-.textContainer{
+
+.textContainer {
   padding: 14px 10px;
   color: #747474;
   line-height: 221%;
-  span{
+
+  span {
     display: block;
     font-weight: 600;
     font-size: 24px;
     line-height: 177%;
     text-transform: capitalize;
     color: #222222;
+
+    @include media-max($l-break) {
+      font-size: 16px;
+    }
+  }
+
+  @include media-max($l-break) {
+    font-size: 13px;
   }
 }
