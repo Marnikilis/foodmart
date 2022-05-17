@@ -5,6 +5,13 @@
   background: url("./billboardSvg/bg.png") repeat;
   background-size: cover;
   margin-bottom: 160px;
+
+  @include media-max($sm-break){
+    margin-bottom: 60px;
+  }
+  @include media-max($l-break){
+    background: transparent;
+  }
 }
 
 .container{
@@ -12,112 +19,58 @@
   padding: 107px 0;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 
-  @include media-max($lgt-break){
+  @include media-max($lg-break){
    flex-direction: column;
     gap: 30px;
   }
+
+  @include media-max($md-break){
+  padding: 60px 0;
+  }
+  @include media-max($l-break){
+  padding: 10px 0;
+  }
 }
 
-.firstCardContainer{
-  background: #E6F3FA url("billboardSvg/bottle.png") no-repeat right bottom;
-  background-size: contain;
+.carouselContainer{
   display: flex;
+  position: relative;
+  overflow: hidden;
   border-radius: 12px;
+  flex: 1 1 70%;
   margin-right: 30px;
-  flex: 0 1 60%;
 
-  @include media-max($lgt-break){
+  @include media-max($lg-break){
     margin-right: 0;
   }
 }
-.shopNowCard{
+.cardsSlider{
   display: flex;
-  flex-direction: column;
-  padding: 110px 30px 40px 110px;
-
-  @include media-max($lgt-break){
-    flex-direction: column;
-    gap: 30px;
-  }
+  transition: $transition;
 }
 
-
 .dots{
-  margin-top: 70px;
-  position: relative;
   display: flex;
-  align-self: flex-end ;
-  width: 100px;
+  position: absolute;
+  top: 90%;
+  left: 45%;
 
-  span{
-    position: relative;
-    background-color: #FFFFFF;
+  button{
     height: 16px;
     width: 16px;
     border-radius: 50%;
+    background: #FFFFFF;
+    margin-right: 10px;
 
-    &:before,
-    &:after{
-      content: '';
-      position: absolute;
-      background-color: #FFFFFF;
-      border-radius: 50%;
-      height: 100%;
-      width: 100%;
+    @include media-max($l-break){
+      height: 10px;
+      width: 10px;
     }
-    &:before{
-      transform: translateX(24px);
-    }
-    &:after{
-      transform: translateX(48px);
-    }
-    &:hover{
+    &:focus{
       background-color: #FFC43F;
     }
-  }
-}
-
-
-.text{
-  font-family: $caption-font;
-  color: #ED8939;
-  margin-bottom: 35px;
-  font-size: 27px;
-  text-transform: capitalize;
-}
-.title{
-  font-family: $heading-font;
-  font-size: 54px;
-  line-height: 68px;
-  margin-bottom: 25px;
-  text-shadow: 2px 1px 1px white;
-
-  @include media-max($xs-break){
-    font-size: 30px;
-  }
-}
-
-.afterTitleText{
-  color: #727272;
-  font-size: 18px;
-  margin-bottom:60px;
-  text-transform: capitalize;
-  text-shadow: 2px 1px 1px white;
-}
-
-.shopBtn{
-  align-self: flex-start;
-  font-family: inherit;
-  border: 1px solid #222222;
-  border-radius: 4px;
-  text-transform: uppercase;
-  padding: 17px 42px;
-  color: inherit;
-  transition: all 0.5s;
-
-  &:hover{
-    background-color: #FFC43F;
   }
 }
 
@@ -128,28 +81,37 @@
   gap: 30px;
   flex: 0 1 40%;
 
-  @include media-max($lgt-break){
+  @include media-max($lg-break){
     flex-direction: row;
     width: 100%;
   }
-  @include media-max($xs-break){
+  @include media-max($sm-break){
    display: none;
   }
 }
 .fruitsCard,
 .bakeCard{
-  max-width: 597px;;
   display: flex;
   border-radius: 12px;
-  padding: 55px;
   flex: 1;
 }
 .fruitsCard{
-  background: #EEF5E4 url("./billboardSvg/fruits.png") no-repeat right bottom;
-  background-size: contain;
+  background: #EEF5E4;
 }
 .bakeCard{
-  background: #F9EBE7 url("./billboardSvg/bakery.png") no-repeat right bottom;
-  background-size: contain;
+  background: #F9EBE7;
 }
-
+.secondCardsImageContainer{
+  flex: 0 1 320px;
+  height: 100%;
+}
+.fruitsImage{
+  background: url("./billboardSvg/fruits.png") no-repeat right bottom;
+  background-size:  350px 250px;
+  height: 100%;
+}
+.bakeryImage{
+  background: url("./billboardSvg/bakery.png") no-repeat right bottom;
+  background-size:  350px 250px;
+  height: 100%;
+}
