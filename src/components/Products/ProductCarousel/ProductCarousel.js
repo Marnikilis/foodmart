@@ -9,7 +9,7 @@ const ProductCarousel = ({products, heading, expire}) => {
   const productsRef = useRef();
   const carouselRef = useRef();
 
-  const {nextCardHandler, prevCardHandler, nextDisabled, prevDisabled} = useCarousel({items: products, ref: productsRef, slider: carouselRef});
+  const {nextCardHandler, prevCardHandler, onTouchEndHandler, onTouchStartHandler, nextDisabled, prevDisabled} = useCarousel({items: products, ref: productsRef, slider: carouselRef});
 
   return (
     <div className={'mainContainer'}>
@@ -21,17 +21,15 @@ const ProductCarousel = ({products, heading, expire}) => {
             {expire}
           </div>
           <div className={'buttons'}>
-            <div>
-              <button disabled={prevDisabled} onClick={prevCardHandler} className={'arrowBtn'}>
-                <Arrow className={'prevBtn'}/>
-              </button>
-              <button disabled={nextDisabled} onClick={nextCardHandler} className={'arrowBtn'}>
-                <Arrow/>
-              </button>
-            </div>
+            <button disabled={prevDisabled} onClick={prevCardHandler} className={'arrowBtn'}>
+              <Arrow className={'prevBtn'}/>
+            </button>
+            <button disabled={nextDisabled} onClick={nextCardHandler} className={'arrowBtn'}>
+              <Arrow/>
+            </button>
           </div>
         </div>
-        <div ref={carouselRef} className={styles.carouselContainer}>
+        <div ref={carouselRef} onTouchStart={onTouchStartHandler} onTouchEnd={onTouchEndHandler} className={styles.carouselContainer}>
           <div ref={productsRef} className={styles.productsContainer}>
             {products.map((product, i) => {
               return <ProductCard key={i} product={product}/>
