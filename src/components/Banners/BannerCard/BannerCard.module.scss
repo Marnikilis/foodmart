@@ -1,40 +1,42 @@
 @import '../../../scss/mixins';
 @import '../../../scss/settings';
 
-.container{
+.container {
   display: flex;
 }
 
-.textContainer{
+.textContainer {
   display: flex;
   flex-direction: column;
   text-shadow: 2px 1px 1px white;
 
 
-  span{
-    &:nth-child(1){
+  span {
+    &:nth-child(1) {
       font-family: $caption-font;
       font-size: 20px;
       color: #BC4B68;
       margin-bottom: 26px;
     }
-    &:nth-child(2){
+
+    &:nth-child(2) {
       font-family: $heading-font;
       font-size: 34px;
       line-height: 46px;
 
-      @include media-max($xs-break){
+      @include media-max($xs-break) {
         font-size: 26px;
       }
     }
-    &:nth-child(3){
+
+    &:nth-child(3) {
       color: #777777;
       line-height: 190%;
     }
   }
 }
 
-.buyBtn{
+.buyBtn {
   align-self: flex-start;
   margin-top: 30px;
   padding: 10px 25px;
