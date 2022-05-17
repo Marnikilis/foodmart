@@ -1,7 +1,7 @@
 @import "../../scss/settings";
 @import "../../scss/mixins";
 
-.container{
+.container {
   width: 100%;
   background-image: url("./appImg/bgApp.svg");
   background-color: #FFF9EB;
@@ -15,29 +15,31 @@
   margin-bottom: 160px;
 }
 
-.phone{
+.phone {
   top: -10%;
   left: 15%;
   position: absolute;
 
-  @include media-max($lg-break){
+  @include media-max($lg-break) {
     display: none;
   }
 }
-.textContainer{
+
+.textContainer {
   max-width: 40%;
   margin-left: auto;
   margin-right: 250px;
 
-  &>*{
+  & > * {
     margin-bottom: 25px;
   }
-  span{
+
+  span {
     color: #555555;
     line-height: 225%;
   }
 
-  @include media-max($lg-break){
+  @include media-max($lg-break) {
     max-width: 80%;
     margin: 0;
   }
@@ -46,11 +48,11 @@
   }
 }
 
-.downloadLinks{
+.downloadLinks {
   display: flex;
   margin-top: 50px;
 
-  &>*{
-   margin-right: 14px;
+  & > * {
+    margin-right: 14px;
   }
 }
