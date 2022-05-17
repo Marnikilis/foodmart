@@ -24,7 +24,7 @@ const Drawer = (props) => {
             <User/>
           </div>
           <div className={styles.searchInput}>
-            <input/>
+            <input placeholder='Search'/>
             <Search/>
           </div>
           <NavLink to='/' className={styles.link}>Home</NavLink>
