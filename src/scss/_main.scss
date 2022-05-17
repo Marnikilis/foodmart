@@ -16,7 +16,9 @@ body {
   font-family: $main-font;
   color: #222222;
   background-color: #FFFFFF;
+  touch-action: none;
 }
+
 .App {
   display: flex;
   flex-direction: column;
@@ -44,33 +46,53 @@ button {
   text-transform: capitalize;
   color: inherit;
 }
-.buttons{
+
+.buttons {
   display: flex;
-  gap: 47px;
+  gap: 15px;
+  margin-left: 45px;
 }
 
-.btnText{
+.btnAll {
+  display: flex;
+  margin-left: 0;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.btnText {
   display: inline-block;
   font-weight: 600;
   color: #787878;
   margin-right: 8px;
+
+  @include media-max($l-break) {
+    font-size: 13px;
+  }
 }
-.arrowBtn{
+
+.arrowBtn {
   height: 38px;
   width: 38px;
   background-color: #FFC43F;
   border-radius: 10px;
-  margin-left: 13px;
   transition: all 0.5s;
 
-  &:disabled{
+  &:disabled {
     background-color: #F1F1F1;
   }
+
+  @include media-max($l-break) {
+    height: 32px;
+    width: 32px;
+  }
 }
-.prevBtn{
+
+.prevBtn {
   transform: rotate(180deg);
 }
-.blackBtn{
+
+.blackBtn {
   background-color: #222222;
   color: #FFFFFF;
   text-transform: uppercase;
@@ -93,34 +115,37 @@ input {
   background-color: inherit;
 }
 
-.heading{
+.heading {
   font-family: $heading-font;
   font-size: 36px;
   margin-bottom: 40px;
   text-transform: capitalize;
 
-  @include media-max($sm-break){
+  @include media-max($sm-break) {
     margin-bottom: 30px;
   }
-  @include media-max($xs-break){
-   font-size: 26px;
+  @include media-max($xs-break) {
+    font-size: 22px;
+    margin-bottom: 20px;
   }
 }
-.headingContainer{
-  position: relative;
-  z-index: 1000;
+
+.headingContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  @include media-max($xs-break){
-  //flex-direction: column;
+  @include media-max($xs-break) {
     align-items: normal;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+  }
+}
+.firstHeadingContainer{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 
-    &>*{
-      display: flex;
-      justify-content: space-between;
-    }
+  @include media-max($xs-break) {
+    flex-direction: column;
   }
 }
