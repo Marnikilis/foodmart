@@ -1,16 +1,21 @@
 @import "../../scss/settings";
 @import "../../scss/mixins";
-.container{
+
+.container {
   width: 100%;
   margin-bottom: 110px;
   overflow: hidden;
+
+  @include media-max($xs-break) {
+    margin-bottom: 60px;
+  }
 }
 
-.carouselContainer{
+.carouselContainer {
   margin-left: -10px;
 }
 
-.brandCards{
+.brandCards {
   padding: 60px 0;
   display: flex;
   justify-content: space-between;

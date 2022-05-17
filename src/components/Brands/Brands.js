@@ -24,31 +24,31 @@ const Brands = () => {
   const brandsRef = useRef();
   const carouselRef = useRef();
 
-  const {nextCardHandler, prevCardHandler, nextDisabled, prevDisabled} = useCarousel({items: brands, ref: brandsRef, slider: carouselRef});
+  const {nextCardHandler, prevCardHandler, onTouchEndHandler, onTouchStartHandler, nextDisabled, prevDisabled} = useCarousel({items: brands, ref: brandsRef, slider: carouselRef});
 
   return (
     <div className={'mainContainer'}>
       <div className={styles.container}>
         <div className={'headingContainer'}>
-          <div className={'heading'}>Newly Arrived Brands</div>
-          <div className={'buttons'}>
-            <button>
+          <div className={'firstHeadingContainer'}>
+            <div className={'heading'}>Newly Arrived Brands</div>
+            <button className={'btnAll'}>
               <div className={'btnText'}>
                 view all offers
               </div>
               <ArrowRight/>
             </button>
-            <div>
-              <button disabled={prevDisabled} onClick={prevCardHandler} className={'arrowBtn'}>
-                <Arrow className={'prevBtn'}/>
-              </button>
-              <button disabled={nextDisabled} onClick={nextCardHandler} className={'arrowBtn'}>
-                <Arrow/>
-              </button>
-            </div>
+          </div>
+          <div className={'buttons'}>
+            <button disabled={prevDisabled} onClick={prevCardHandler} className={'arrowBtn'}>
+              <Arrow className={'prevBtn'}/>
+            </button>
+            <button disabled={nextDisabled} onClick={nextCardHandler} className={'arrowBtn'}>
+              <Arrow/>
+            </button>
           </div>
         </div>
-        <div ref={carouselRef} className={styles.carouselContainer}>
+        <div ref={carouselRef} onTouchStart={onTouchStartHandler} onTouchEnd={onTouchEndHandler} className={styles.carouselContainer}>
           <div ref={brandsRef} className={styles.brandCards}>
             {brands.map((brand, i) => {
               return <BrandCard key={i} img={brand.img} title={brand.title} caption={brand.caption}/>
