@@ -81,7 +81,7 @@
         color: #FFC43F;
       }
 
-      @include media-max($xs-break){
+      @include media-max($xs-break) {
         font-size: 26px;
       }
     }

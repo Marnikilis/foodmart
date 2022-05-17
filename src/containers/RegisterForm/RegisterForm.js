@@ -11,11 +11,11 @@ const RegisterForm = () => {
       <div className={styles.container}>
         <img src={leavesTop} className={styles.leavesTop} alt='Leaves'/>
         <img src={leavesBottom} className={styles.leavesBottom} alt='Leaves'/>
-       <div className={styles.textContainer}>
+        <div className={styles.textContainer}>
         <span> Get
           <span> 20% discount</span> on your first purchase</span>
-         <span>Just Sign Up & Register it now to become member of Templates Jungle.</span>
-       </div>
+          <span>Just Sign Up & Register it now to become member of Templates Jungle.</span>
+        </div>
         <form>
           <label>Email address</label>
           <div className={styles.formInput}>
