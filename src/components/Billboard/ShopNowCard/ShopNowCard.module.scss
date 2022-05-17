@@ -1,0 +1,158 @@
+@import '../../../scss/mixins';
+@import '../../../scss/settings';
+
+.firstCardContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 950px;
+  padding-right: 100px;
+
+  @include media-max($lg-break) {
+    padding-right: 0;
+    flex-basis: 1200px;
+  }
+  @include media-max($md-break) {
+    flex-basis: 1100px;
+  }
+  @include media-max($sm-break) {
+    flex-basis: 800px;
+  }
+  @include media-max($xs-break) {
+    flex-basis: 600px;
+  }
+  @include media-max($l-break) {
+    flex-basis: 400px;
+  }
+}
+
+.firstCardContent {
+  display: flex;
+  padding-top: 30px;
+  align-items: center;
+
+  @include media-max($xxs-break) {
+    padding-top: 0;
+  }
+}
+
+.imageContainer {
+  flex: 1 1 550px;
+  height: 540px;
+
+  @include media-max($md-break) {
+    flex-basis: 650px;
+    height: 500px;
+  }
+  @include media-max($sm-break) {
+    flex-basis: 450px;
+    height: 500px;
+  }
+  @include media-max($xs-break) {
+    flex-basis: 450px;
+    height: 450px;
+  }
+  @include media-max($l-break) {
+    flex-basis: 280px;
+    height: 380px;
+  }
+  @include media-max($xxs-break) {
+    flex-basis: 440px;
+    height: 320px;
+  }
+}
+
+.backgroundImage {
+  background: no-repeat;
+  background-size: 370px 540px;
+  height: 100%;
+
+  @include media-max($lg-break) {
+    background-size: 350px 490px;
+  }
+  @include media-max($md-break) {
+    background-size: 310px 450px;
+  }
+  @include media-max($xs-break) {
+    background-size: 260px 400px;
+  }
+  @include media-max($l-break) {
+    background-size: 210px 300px;
+  }
+}
+
+.shopNowCard {
+  display: flex;
+  flex-direction: column;
+  padding: 70px 0 0 70px;
+  gap: 25px;
+  flex: 1 1 60%;
+
+  @include media-max($md-break) {
+    padding: 30px 0 0 50px;
+  }
+  @include media-max($l-break) {
+    padding: 30px 0 0 20px;
+    gap: 20px;
+  }
+}
+
+.text {
+  font-family: $caption-font;
+  color: #ED8939;
+  font-size: 27px;
+  text-transform: capitalize;
+
+  @include media-max($xxs-break) {
+    font-size: 16px;
+  }
+}
+
+.title {
+  display: inline-block;
+  font-family: $heading-font;
+  font-size: 54px;
+  line-height: 68px;
+  text-shadow: 2px 1px 1px white;
+
+  @include media-max($xs-break) {
+    font-size: 30px;
+    line-height: 33px;
+  }
+  @include media-max($xxs-break) {
+    font-size: 25px;
+  }
+}
+
+.afterTitleText {
+  color: #727272;
+  font-size: 18px;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+  text-shadow: 2px 1px 1px white;
+
+  @include media-max($l-break) {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+}
+
+.shopBtn {
+  align-self: flex-start;
+  font-family: inherit;
+  border: 1px solid #222222;
+  border-radius: 4px;
+  text-transform: uppercase;
+  padding: 17px 42px;
+  color: inherit;
+  transition: all 0.5s;
+  margin-bottom: 40px;
+
+  &:hover {
+    background-color: #FFC43F;
+  }
+
+  @include media-max($l-break) {
+    font-size: 12px;
+    padding: 5px 15px;
+  }
+}
