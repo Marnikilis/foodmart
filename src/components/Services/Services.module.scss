@@ -7,7 +7,7 @@
   position: relative;
   margin-bottom: 90px;
 
-  @include media-max($lgt-break){
+  @include media-max($lgt-break) {
     flex-wrap: wrap;
   }
 }
@@ -20,7 +20,7 @@
 
 .serviceContainer {
   position: relative;
-  z-index: 100;
+  z-index: 10;
   display: flex;
   align-items: flex-start;
 
