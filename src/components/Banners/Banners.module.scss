@@ -22,7 +22,7 @@
 }
 .cards{
   position: relative;
-  z-index: 1000;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,9 +33,9 @@
     flex-direction: column;
     padding: 190px 80px;
   }
-  @include media-max($sm-break){
+  @include media-max($sm-break) {
     flex-direction: column;
-    padding: 190px 0;
+    padding: 130px 0;
   }
 }
 .chocolateCard,
@@ -58,7 +58,6 @@
 .imageContainer{
   flex: 0 1 400px;
   height: 300px;
-  //width: 400px;
 }
 .firstBackgroundImage{
   background: url("bannersImg/chocolate.png") no-repeat left center;
