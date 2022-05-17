@@ -1,7 +1,7 @@
 @import "../../scss/settings";
 @import "../../scss/mixins";
 
-header{
+header {
   position: relative;
   @include media-max($sm-break) {
     padding: 10px 0;
@@ -13,7 +13,7 @@ header{
   flex-direction: column;
 }
 
-.headerContainer{
+.headerContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,9 +22,11 @@ header{
 
   @include media-max($sm-break) {
     align-items: flex-start;
+    height: 70px;
   }
 }
-.firstHeaderContainer{
+
+.firstHeaderContainer {
   flex: 0 1 65%;
   display: flex;
   gap: 60px;
@@ -34,18 +36,22 @@ header{
     flex: 0 1 95%;
     flex-direction: column;
     gap: 0;
-    a{
+    a {
       margin-bottom: 20px;
     }
   }
 }
 
-.secondHeaderContainer{
+.secondHeaderContainer {
   display: flex;
   gap: 70px;
+
+  @include media-max($sm-break) {
+    display: none;
+  }
 }
 
-.searchContainer{
+.searchContainer {
   width: 100%;
   display: flex;
   background-color: #F8F8F8;
@@ -54,116 +60,143 @@ header{
   padding: 12px 15px;
   max-width: 650px;
   flex: 0 1 50%;
+
+  @include media-max($sm-break) {
+    display: none;
+  }
 }
 
-.selectContainer{
+.selectContainer {
   position: relative;
   display: flex;
   align-items: center;
   font-weight: 600;
   margin-right: 25px;
 
-  select{
+  select {
     padding: 0 25px 0 10px;
   }
 }
 
-.arrow{
+.arrow {
   display: block;
   position: absolute;
   top: 50%;
   right: 3px;
   pointer-events: none;
 }
-.searchInput{
+
+.searchInput {
   display: flex;
   align-items: center;
   width: 100%;
 
-  input{
+  input {
     display: inline-block;
     width: 100%;
     caret-color: #DEDEDE;
     margin-right: 5px;
-    &::placeholder{
+
+    &::placeholder {
       padding: 0 20px;
     }
   }
 }
 
 .supportContainer,
-.cartContainer{
+.cartContainer {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-.supportContainer{
+
+.supportContainer {
   @include media-max($lg-break) {
     display: none;
   }
 }
-.cartContainer{
+
+.cartContainer {
   align-items: flex-start;
+
+  @include media-max($md-break) {
+    display: none;
+  }
 }
 
-.captionText{
+.captionText {
   font-size: 12px;
   color: #898989;
   text-transform: capitalize;
 }
-.captionNumber{
- font-size: 18px;
+
+.captionNumber {
+  font-size: 18px;
 }
 
-.phone{
+.phone {
   align-items: flex-end;
   display: none;
 
-  @include media-max($lg-break){
+  a {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background-color: #F1F1F1;
+    display: flex;
+    align-items: center;
+  }
+
+  @include media-max($lg-break) {
     display: flex;
     margin-right: -50px;
   }
 }
-.userContainer{
+
+.userContainer {
   display: flex;
   align-items: flex-end;
   gap: 30px;
 
 
   @include media-max($sm-break) {
-    &>*{
-     &:not(:first-child){
-       display: none;
-     }
-   }
+    & > * {
+      &:not(:first-child) {
+        display: none;
+      }
+    }
   }
 }
 
 
-nav{
+nav {
   height: 86px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+
+  @include media-max($sm-break) {
+    display: none;
+  }
 }
 
-.firstNavContainer{
+.firstNavContainer {
   display: flex;
   align-items: center;
   gap: 147px;
 }
 
-.selectContainer{
+.selectContainer {
   position: relative;
 
-  select{
+  select {
     padding-right: 16px;
     text-transform: capitalize;
   }
 }
 
-.arrow{
+.arrow {
   display: block;
   position: absolute;
   top: 50%;
@@ -187,29 +220,32 @@ nav{
   padding: 10px 25px;
   border-radius: 6px;
 
-  &:global{
+  &:global {
     &.active {
       background-color: #FFC43F;
     }
   }
 }
-.presentContainer{
+
+.presentContainer {
   display: flex;
   align-items: center;
 
-  span{
+  span {
     font-weight: 600;
     text-transform: capitalize;
     margin-left: 10px;
   }
-  @include media-max($lg-break){
+
+  @include media-max($lg-break) {
     margin-right: 80px;
   }
-  @include media-max($md-break){
+  @include media-max($md-break) {
     display: none;
   }
 }
-.secondNavContainer{
+
+.secondNavContainer {
   display: flex;
 }
 

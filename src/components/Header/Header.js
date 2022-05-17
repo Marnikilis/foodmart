@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import styles from './Header.module.scss';
 import {ReactComponent as Cart} from "./header-icons/cart.svg";
 import {ReactComponent as ArrowDown} from "./header-icons/arrowDown.svg";
@@ -13,7 +13,22 @@ import MenuToggle from "./MenuToggle/MenuToggle";
 import Drawer from "./Drawer/Drawer";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const [value, setValue] = useState(' ');
+  const inputRef = useRef();
+
+  useEffect(() => {
+    observer.observe(inputRef.current);
+  }, [])
+
+  const observer = new ResizeObserver(entries => {
+    const widthEl = entries[0].contentRect.width;
+    if (widthEl < 300) {
+      setValue('Search ')
+    } else if (widthEl > 300) {
+      setValue('Search for more than 20,000 products')
+    }
+  });
 
   const toggleMenuHandler = () => {
     setIsOpen(prevState => !prevState)
@@ -24,7 +39,6 @@ const Header = () => {
 
   return (
     <header>
-      {/*<a href='#close' className={styles.backdrop}/>*/}
       <div className={`mainContainer ${styles.container}`}>
         <div className={styles.headerContainer}>
           <div className={styles.firstHeaderContainer}>
@@ -39,7 +53,7 @@ const Header = () => {
                 <ArrowDown className={styles.arrow}/>
               </div>
               <div className={styles.searchInput}>
-                <input placeholder='Search for more than 20,000 products'/>
+                <input ref={inputRef} placeholder={value}/>
                 <Search/>
               </div>
             </div>
@@ -89,10 +103,10 @@ const Header = () => {
               <Present/>
               <span>Get your coupon code</span>
             </div>
-            <MenuToggle onToggle={toggleMenuHandler} isOpen={isOpen}/>
-            <Drawer isOpen={isOpen} onClose={menuCloseHandler}/>
           </div>
         </nav>
+        <MenuToggle onToggle={toggleMenuHandler} isOpen={isOpen}/>
+        <Drawer isOpen={isOpen} onClose={menuCloseHandler}/>
       </div>
     </header>
   );
