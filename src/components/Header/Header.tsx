@@ -3,6 +3,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import styles from './Header.module.scss';
 import {ReactComponent as Cart} from "./header-icons/cart.svg";
 import {ReactComponent as ArrowDown} from "./header-icons/arrowDown.svg";
+import {ReactComponent as Arrow} from "./header-icons/arrow.svg";
 import {ReactComponent as Search} from "./header-icons/search.svg";
 import {ReactComponent as Favorite} from "./header-icons/favorite.svg";
 import {ReactComponent as User} from "./header-icons/user.svg";
@@ -75,7 +76,6 @@ const Header : React.FC = () => {
               </div>
             </div>
           </div>
-
           <div className={styles.secondHeaderContainer}>
             <div className={styles.supportContainer}>
               <div className={styles.captionText}>For support ?</div>
@@ -100,7 +100,7 @@ const Header : React.FC = () => {
         <nav>
           <div className={styles.firstNavContainer}>
             <CustomSelect options={optionsShop}>
-              <ArrowDown/>
+              <Arrow/>
             </CustomSelect>
             <div className={styles.navigation}>
               <NavLink to='/' className={styles.link}>Home</NavLink>
