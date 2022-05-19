@@ -27,7 +27,6 @@ const CustomSelect = ({options, children}: SelectType) => {
 
   const onBackDownHandler = () => {
     const element = selectRef.current.getBoundingClientRect();
-    console.log(element.height)
     setYPos(element.y + element.height)
     setXPos(element.x - 10)
     setIsOpen(prevState => !prevState)
