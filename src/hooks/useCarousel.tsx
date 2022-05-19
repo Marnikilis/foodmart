@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 
 export const useCarousel = ({items, ref, slider}) => {
   const [nextDisabled, setNextDisabled] = useState(false);
@@ -15,7 +15,7 @@ export const useCarousel = ({items, ref, slider}) => {
   const onTouchEndHandler = (e) => {
     endPosition = e.changedTouches[0].clientX;
 
-    let width = ref.current.children[0].offsetWidth;
+    let width = ref.current.children[0].getBoundingClientRect().width;
     let slides = Math.round(slider.current.offsetWidth / width);
 
 
@@ -27,10 +27,11 @@ export const useCarousel = ({items, ref, slider}) => {
   }
 
   const nextCardHandler = () => {
-
-    let width = ref.current.children[0].offsetWidth;
-    let slides = Math.round(slider.current.offsetWidth / width);
-
+    let width = ref.current.children[0].getBoundingClientRect().width;
+    let slides = Math.round(slider.current.getBoundingClientRect().width / width);
+    console.log(slides)
+    console.log(slide)
+    console.log(items.length - slide);
     setSlide(prevState => prevState + 1);
 
     if (slide > 0) {
@@ -44,7 +45,7 @@ export const useCarousel = ({items, ref, slider}) => {
   };
 
   const prevCardHandler = () => {
-    let width = ref.current.children[0].offsetWidth;
+    let width = ref.current.children[0].getBoundingClientRect().width;
 
     ref.current.style.marginLeft = -width * (slide - 2) + 'px';
     setSlide(prevState => prevState - 1);
