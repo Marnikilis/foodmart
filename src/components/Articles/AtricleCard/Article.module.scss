@@ -9,6 +9,7 @@
   border: 1px solid #FBFBFB;
   box-shadow: 0 5px 22px rgba(0, 0, 0, 0.04);
   border-radius: 16px;
+  cursor: pointer;
 
   @include media-max($lg-break) {
     padding: 10px;
