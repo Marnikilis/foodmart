@@ -1,8 +1,10 @@
 import React, {useRef, useState} from 'react';
+//@ts-ignore
 import styles from './Billboard.module.scss';
 import CardSaleItem from "../CardSale/CardSaleItem";
 import ShopNowCard from "./ShopNowCard/ShopNowCard";
 import bottle from './billboardSvg/bottle.png';
+
 
 const cardContent = [
   {img: bottle, color: '#E6F3FA', title: 'Fresh Smoothie & Summer Juice'},
@@ -10,9 +12,9 @@ const cardContent = [
   {img: bottle, color: '#F9EBE7', title: 'Fresh Smoothie & Summer Juice'},
 ]
 
-const Billboard = () => {
+const Billboard = () : JSX.Element => {
   const [slide, setSlide] = useState(1);
-  const sliderRef = useRef();
+  const sliderRef = useRef<HTMLDivElement| null>(null);
 
   let position = 0;
   let endPosition = 0;
@@ -23,13 +25,13 @@ const Billboard = () => {
   }
 
   const middleSlideHandler = () => {
-    let width = sliderRef.current.children[0].offsetWidth;
+    let width = sliderRef.current.children[0].getBoundingClientRect().width;
     let slides = cardContent.length - 2;
     sliderRef.current.style.marginLeft = -width * slides + 'px';
   }
 
   const lastSlideHandler = () => {
-    let width = sliderRef.current.children[0].offsetWidth;
+    let width = sliderRef.current.children[0].getBoundingClientRect().width;
     let slides = cardContent.length - 1;
     sliderRef.current.style.marginLeft = -width * slides + 'px';
   }
@@ -37,9 +39,9 @@ const Billboard = () => {
   const onTouchStartHandler = (e) => {
     position = e.targetTouches[0].clientX;
   }
-
+  //
   const onTouchEndHandler = (e) => {
-    let width = sliderRef.current.children[0].offsetWidth;
+    let width = sliderRef.current.children[0].getBoundingClientRect().width;
     endPosition = e.changedTouches[0].clientX;
     let slides = cardContent.length - 1;
 
