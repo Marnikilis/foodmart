@@ -45,6 +45,7 @@ button {
   font-size: inherit;
   text-transform: capitalize;
   color: inherit;
+  cursor: pointer;
 }
 
 .buttons {
@@ -104,6 +105,7 @@ a:visited {
   text-decoration: none;
   transition: all .5s;
   color: inherit;
+  cursor: pointer;
 }
 
 select,
