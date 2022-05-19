@@ -1,11 +1,18 @@
-import React, {useRef} from 'react';
-import {useCarousel} from "../../../hooks/useCarousel";
+import React, { useRef } from 'react';
+import { useCarousel } from "../../../hooks/useCarousel";
+//@ts-ignore
 import styles from "../Products.module.scss";
-import {ReactComponent as Clock} from "../TopProducts/topProductsImg/clock.svg";
-import {ReactComponent as Arrow} from "../../../images/arrow.svg";
+import { ReactComponent as Clock } from "../TopProducts/topProductsImg/clock.svg";
+import { ReactComponent as Arrow } from "../../../images/arrow.svg";
 import ProductCard from "../ProductCard/ProductCard";
 
-const ProductCarousel = ({products, heading, expire}) => {
+interface Product {
+  products: any;
+  heading: string,
+  expire?: string;
+}
+
+const ProductCarousel = ({products, heading, expire}: Product) => {
   const productsRef = useRef();
   const carouselRef = useRef();
 
