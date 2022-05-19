@@ -1,4 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react';
+//@ts-ignore
 import styles from './Header.module.scss';
 import {ReactComponent as Cart} from "./header-icons/cart.svg";
 import {ReactComponent as ArrowDown} from "./header-icons/arrowDown.svg";
@@ -11,15 +12,28 @@ import {NavLink} from "react-router-dom";
 import {ReactComponent as Present} from "./navSvg/present.svg";
 import MenuToggle from "./MenuToggle/MenuToggle";
 import Drawer from "./Drawer/Drawer";
+import CustomSelect from "../../containers/CustomSelect/CustomSelect";
 
-const Header = () => {
+const optionsCategories = [
+  "All Categories",
+  "Fruits",
+  "Breads",
+  "Oil",
+  "Raw Meat",
+  "Wine Drinks",
+  "Natural Herbs"
+];
+const optionsShop = [
+  "shop by departments",
+  "shop by departments",
+  "shop by departments",
+];
+
+const Header : React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [value, setValue] = useState(' ');
   const inputRef = useRef();
 
-  useEffect(() => {
-    observer.observe(inputRef.current);
-  }, [])
 
   const observer = new ResizeObserver(entries => {
     const widthEl = entries[0].contentRect.width;
@@ -29,6 +43,12 @@ const Header = () => {
       setValue('Search for more than 20,000 products')
     }
   });
+
+   useEffect(() => {
+    observer.observe(inputRef.current);
+     // eslint-disable-next-line
+  }, [])
+
 
   const toggleMenuHandler = () => {
     setIsOpen(prevState => !prevState)
@@ -46,12 +66,9 @@ const Header = () => {
               <Logo/>
             </NavLink>
             <div className={styles.searchContainer}>
-              <div className={styles.selectContainer}>
-                <select>
-                  <option>All Categories</option>
-                </select>
-                <ArrowDown className={styles.arrow}/>
-              </div>
+              <CustomSelect options={optionsCategories}>
+                <ArrowDown/>
+              </CustomSelect>
               <div className={styles.searchInput}>
                 <input ref={inputRef} placeholder={value}/>
                 <Search/>
@@ -62,7 +79,7 @@ const Header = () => {
           <div className={styles.secondHeaderContainer}>
             <div className={styles.supportContainer}>
               <div className={styles.captionText}>For support ?</div>
-              <div className={styles.captionNumber}>+980-34984089</div>
+              <a href="tel:+980-34984089" className={styles.captionNumber}>+980-34984089</a>
             </div>
             <div className={styles.phone}>
               <a href="tel:+980-34984089">
@@ -82,12 +99,9 @@ const Header = () => {
         </div>
         <nav>
           <div className={styles.firstNavContainer}>
-            <div className={styles.selectContainer}>
-              <select>
-                <option>shop by departments</option>
-              </select>
-              <ArrowDown className={styles.arrow}/>
-            </div>
+            <CustomSelect options={optionsShop}>
+              <ArrowDown/>
+            </CustomSelect>
             <div className={styles.navigation}>
               <NavLink to='/' className={styles.link}>Home</NavLink>
               <NavLink to='/shop' className={styles.link}>Shop</NavLink>
@@ -100,7 +114,7 @@ const Header = () => {
           </div>
           <div className={styles.secondNavContainer}>
             <div className={styles.presentContainer}>
-              <Present/>
+              <Present />
               <span>Get your coupon code</span>
             </div>
           </div>

@@ -1,7 +1,8 @@
 import React from 'react';
+//@ts-ignore
 import styles from './RegisterForm.module.scss';
-import {ReactComponent as Email} from './formSvg/email.svg';
-import {ReactComponent as Password} from './formSvg/password.svg';
+import { ReactComponent as Email } from './formSvg/email.svg';
+import { ReactComponent as Password } from './formSvg/password.svg';
 import leavesTop from '../../images/leaves1.png';
 import leavesBottom from '../../images/leaves2.png';
 

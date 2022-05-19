@@ -1,4 +1,5 @@
 import React from 'react';
+//@ts-ignore
 import styles from './FoodMartApp.module.scss';
 import phone from './appImg/phone.svg';
 import {ReactComponent as GooglePlay} from './appImg/gplay.svg';

@@ -1,4 +1,5 @@
 import React from 'react';
+//@ts-ignore
 import styles from './Services.module.scss';
 import cart from './servicesSvg/cart.svg';
 import secure from './servicesSvg/secure.svg';

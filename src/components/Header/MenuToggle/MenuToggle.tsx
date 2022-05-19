@@ -1,10 +1,17 @@
 import React from 'react';
+//@ts-ignore
 import styles from './MenuToggle.module.scss';
 
-const MenuToggle = (props) => {
+
+interface MenuType {
+  isOpen: boolean;
+  onToggle: () => void;
+}
+
+const MenuToggle = ({isOpen, onToggle}: MenuType): JSX.Element => {
   const cls = [styles.menuToggle];
 
-  if (props.isOpen) {
+  if (isOpen) {
     cls.push(styles.open)
     cls.push(styles.menuClose)
   } else {
@@ -14,7 +21,7 @@ const MenuToggle = (props) => {
   return (
     <div
       className={cls.join(' ')}
-      onClick={props.onToggle}
+      onClick={onToggle}
     />
   );
 };

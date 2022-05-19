@@ -1,4 +1,5 @@
 import React from 'react';
+// @ts-ignore
 import styles from './Footer.module.scss';
 import {ReactComponent as Logo} from '../../images/logo.svg';
 import {ReactComponent as Facebook} from './footerSvg/facebook.svg';
@@ -18,7 +19,9 @@ const Footer = () => {
           <img src={leaves} className={styles.leaves} alt='Leaves'/>
           <div className={styles.firstFooterContainer}>
             <div className={styles.iconsContainer}>
-              <Logo/>
+              <NavLink to='/'>
+                <Logo/>
+              </NavLink>
               <div className={styles.social}>
                 <div className={styles.iconContainer}><Facebook/></div>
                 <div className={styles.iconContainer}><Twitter/></div>

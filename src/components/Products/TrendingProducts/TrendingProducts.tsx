@@ -1,4 +1,5 @@
 import React from 'react';
+//@ts-ignore
 import styles from './TrendingProducts.module.scss';
 import {NavLink} from "react-router-dom";
 import juiceMelon from '../ProductCard/productImg/juiceMelon.png';
@@ -26,20 +27,20 @@ const trendProducts = [
   {img: rasberries, title: 'Raspberries', quantity: '1 kg', rating: '3.5', price: '$14.00'},
 ];
 
-const TrendingProducts = () => {
+const TrendingProducts = () : JSX.Element => {
   return (
     <div className={'mainContainer'}>
       <div className={styles.container}>
         <div className={styles.productsNav}>
           <div className={'heading'}>Trending Products</div>
           <div className={styles.navigation}>
-            <NavLink to='/all' className={styles.link} data='All'>All</NavLink>
-            <NavLink to='/fruits&' className={styles.link} data='Fruits & Veges'>Fruits & Veges</NavLink>
-            <NavLink to='/juicesVeges' className={styles.link} data='Juices'>Juices</NavLink>
-            <NavLink to='/breadsSweets' className={styles.link} data='Breads & Sweets '> Breads & Sweets </NavLink>
-            <NavLink to='/oil&ghee' className={styles.link} data='Oil & Ghee'>Oil & Ghee</NavLink>
-            <NavLink to='/rawMeats' className={styles.link} data='Raw Meats'> Raw Meats </NavLink>
-            <NavLink to='/naturalHerbs' className={styles.link} data='Natural Herbs'>Natural Herbs</NavLink>
+            <NavLink to='/all' className={styles.link}>All</NavLink>
+            <NavLink to='/fruits&' className={styles.link}>Fruits & Veges</NavLink>
+            <NavLink to='/juicesVeges' className={styles.link}>Juices</NavLink>
+            <NavLink to='/breadsSweets' className={styles.link}> Breads & Sweets </NavLink>
+            <NavLink to='/oil&ghee' className={styles.link}>Oil & Ghee</NavLink>
+            <NavLink to='/rawMeats' className={styles.link}> Raw Meats </NavLink>
+            <NavLink to='/naturalHerbs' className={styles.link}>Natural Herbs</NavLink>
           </div>
         </div>
         <div className={styles.productsContainer}>
