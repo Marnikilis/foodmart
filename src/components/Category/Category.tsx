@@ -1,4 +1,5 @@
 import React, {useRef} from 'react';
+//@ts-ignore
 import styles from './Category.module.scss';
 import {ReactComponent as ArrowRight} from './categorySvg/smallArrow.svg';
 import {ReactComponent as Arrow} from '../../images/arrow.svg';

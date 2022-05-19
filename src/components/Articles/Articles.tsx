@@ -4,6 +4,7 @@ import fruits from './articlesImg/fruits.png';
 import veg from './articlesImg/veg.png';
 import cashew from './articlesImg/cashew.png';
 import Article from "./AtricleCard/Article";
+//@ts-ignore
 import styles from './Aticles.module.scss';
 
 

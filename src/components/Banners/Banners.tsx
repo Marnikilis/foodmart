@@ -1,4 +1,5 @@
 import React from 'react';
+//@ts-ignore
 import styles from './Banners.module.scss';
 import leavesTop from '../../images/leaves1.png';
 import leavesBottom from '../../images/leaves2.png';

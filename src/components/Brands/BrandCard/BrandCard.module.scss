@@ -1,6 +1,6 @@
 .brandCardContainer {
   padding: 0 10px;
-  flex: 0 0 340px;
+  flex: 1 0 340px;
 }
 
 .brandCardContent {
@@ -11,6 +11,7 @@
   border-radius: 16px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 
   img {
     width: 150px;

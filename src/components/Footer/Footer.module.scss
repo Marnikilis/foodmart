@@ -16,6 +16,7 @@
 
 .leaves {
   position: absolute;
+  z-index: -1;
   top: 0;
   transform: scaleX(-1);
   right: -180px;
@@ -24,7 +25,9 @@
 }
 
 .firstFooterContainer {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid #F8F8F8;
   padding-bottom: 20px;
   gap: 100px;
@@ -79,6 +82,7 @@
   border-radius: 4px;
   margin-right: 14px;
   transition: all 0.5s;
+  cursor: pointer;
 
 
   & > * {
