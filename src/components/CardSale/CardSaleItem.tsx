@@ -1,9 +1,14 @@
 import React from 'react';
+//@ts-ignore
 import styles from './CardSaleItem.module.scss';
-import {ReactComponent as ArrowRight} from './arrowRight.svg';
+import { ReactComponent as ArrowRight } from './arrowRight.svg';
 
+interface CardSaleType {
+  discount: string;
+  title: string;
+}
 
-const CardSaleItem = ({discount, title}) => {
+const CardSaleItem = ({discount, title}: CardSaleType) => {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.discountText}>{discount}% off</div>

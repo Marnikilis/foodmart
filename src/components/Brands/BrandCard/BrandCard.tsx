@@ -1,7 +1,14 @@
 import React from 'react';
+//@ts-ignore
 import styles from './BrandCard.module.scss';
 
-const BrandCard = ({img, caption, title}) => {
+interface BrandType {
+  img: string;
+  title: string;
+  caption: string;
+}
+
+const BrandCard = ({img, caption, title}: BrandType) => {
   return (
     <div className={styles.brandCardContainer}>
       <div className={styles.brandCardContent}>

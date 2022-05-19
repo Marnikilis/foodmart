@@ -1,7 +1,13 @@
 import React from 'react';
+//@ts-ignore
 import styles from './CategoryCard.module.scss';
 
-const CategoryCard = ({img, title}) => {
+interface CategoryType {
+  img: string;
+  title: string;
+}
+
+const CategoryCard = ({img, title}: CategoryType) => {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.cardContent}>

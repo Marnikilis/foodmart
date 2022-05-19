@@ -1,7 +1,14 @@
 import React from 'react';
+//@ts-ignore
 import styles from './ShopNowCard.module.scss';
 
-const ShopNowCard = ({title, img, color}) => {
+interface ShopNowType {
+  img: string;
+  title: string;
+  color: string;
+}
+
+const ShopNowCard = ({title, img, color}: ShopNowType) => {
   return (
     <div className={styles.firstCardContainer} style={{background: color}}>
       <div className={styles.firstCardContent}>
