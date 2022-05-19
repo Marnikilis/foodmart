@@ -52,6 +52,7 @@
   border-radius: 50%;
   background-color: #FFFFFF;
   border: 0.5px solid #EAEAEA;
+  cursor: pointer;
 
   &:hover .heart {
     stroke: #EF2525;
@@ -166,6 +167,7 @@
   color: #787878;
   font-size: 13px;
   text-transform: capitalize;
+  cursor: pointer;
 
   & > * {
     margin-right: 8px;
