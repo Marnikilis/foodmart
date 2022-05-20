@@ -34,6 +34,8 @@
   flex-direction: column;
   transform: translateY(0);
   transition: $transition;
+  box-shadow: 0 10.9688px 21.9375px rgba(118, 118, 118, 0.2);
+  padding: 10px 0;
 
   button{
     padding: 10px 20px 10px 10px;
