@@ -27,7 +27,7 @@ const CustomSelect = ({options, children}: SelectType) => {
 
   const onBackDownHandler = () => {
     const element = selectRef.current.getBoundingClientRect();
-    setYPos(element.y + element.height)
+    setYPos(element.y + window.scrollY + element.height)
     setXPos(element.x - 10)
     setIsOpen(prevState => !prevState)
 
@@ -47,7 +47,7 @@ const CustomSelect = ({options, children}: SelectType) => {
       </div>
       {xPos ? createPortal(
         <>
-          <div className={cls.join(' ')} style={{position: 'absolute', top: yPos, left: xPos}}>
+          <div className={cls.join(' ')}  style={{position: 'absolute', top: yPos, left: xPos}}>
             {options && options.map((option, i) => {
               return <button key={i} onClick={(e) => chooseOptionHandler(e)}>{option}</button>
             })}
