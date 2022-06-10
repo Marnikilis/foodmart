@@ -1,32 +1,35 @@
 @import '../../scss/mixins';
 @import '../../scss/settings';
 
-.container{
-  position:relative;
+.container {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
 
-.select{
+.select {
   display: flex;
   align-items: center;
   position: relative;
 
-  input{
+  input {
     cursor: pointer;
     width: 90%;
-    &::placeholder{
+
+    &::placeholder {
       color: #222222;
       text-transform: capitalize;
     }
   }
-  button{
+
+  button {
     margin-right: 15px;
   }
 }
-.backdown{
+
+.backdown {
   z-index: 1000;
-  background-color:#F8F8F8;
+  background-color: #F8F8F8;
   max-height: 200px;
   overflow: auto;
   display: flex;
@@ -36,20 +39,19 @@
   overflow-x: hidden;
   transition: $transition;
   box-shadow: 0 10.9688px 21.9375px rgba(118, 118, 118, 0.2);
-  //padding: 0 10px;
 
-  button{
+  button {
     width: 100%;
     text-align: left;
     padding: 10px;
     text-transform: capitalize;
 
-    &:hover{
+    &:hover {
       background-color: rgba(#DEDEDE, 0.3);
     }
   }
 
-  &.close{
+  &.close {
     transform: translateY(-150%);
     display: none;
   }
