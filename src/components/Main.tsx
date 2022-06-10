@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Billboard from "./Billboard/Billboard";
 import Category from "./Category/Category";
 import Brands from "./Brands/Brands";
@@ -16,19 +16,19 @@ import Services from "./Services/Services";
 const Main = () => {
   return (
     <>
-      <Billboard/>
-      <Category/>
-      <Brands/>
-      <TrendingProducts/>
-      <Banners/>
-      <TopProducts/>
-      <RegisterForm/>
-      <BestSellProducts/>
-      <LandedItems/>
-      <Articles/>
-      <FoodMartApp/>
-      <PopularProducts/>
-      <Services/>
+      <Billboard />
+      <Category />
+      <Brands />
+      <TrendingProducts />
+      <Banners />
+      <TopProducts />
+      <RegisterForm />
+      <BestSellProducts />
+      <LandedItems />
+      <Articles />
+      <FoodMartApp />
+      <PopularProducts />
+      <Services />
     </>
   );
 };

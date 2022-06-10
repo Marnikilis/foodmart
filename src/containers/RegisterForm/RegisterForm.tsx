@@ -1,39 +1,45 @@
-import React from 'react';
+import React from "react";
 //@ts-ignore
-import styles from './RegisterForm.module.scss';
-import { ReactComponent as Email } from './formSvg/email.svg';
-import { ReactComponent as Password } from './formSvg/password.svg';
-import leavesTop from '../../images/leaves1.png';
-import leavesBottom from '../../images/leaves2.png';
+import styles from "./RegisterForm.module.scss";
+import { ReactComponent as Email } from "./formSvg/email.svg";
+import { ReactComponent as Password } from "./formSvg/password.svg";
+import leavesTop from "../../images/leaves1.png";
+import leavesBottom from "../../images/leaves2.png";
 
 const RegisterForm = () => {
   return (
-    <div className={'mainContainer'}>
+    <div className={"mainContainer"}>
       <div className={styles.container}>
-        <img src={leavesTop} className={styles.leavesTop} alt='Leaves'/>
-        <img src={leavesBottom} className={styles.leavesBottom} alt='Leaves'/>
+        <img src={leavesTop} className={styles.leavesTop} alt="Leaves" />
+        <img src={leavesBottom} className={styles.leavesBottom} alt="Leaves" />
         <div className={styles.textContainer}>
-        <span> Get
-          <span> 20% discount</span> on your first purchase</span>
-          <span>Just Sign Up & Register it now to become member of Templates Jungle.</span>
+          <span>
+            Get
+            <span> 20% discount</span> on your first purchase
+          </span>
+          <span>
+            Just Sign Up & Register it now to become member of Templates Jungle.
+          </span>
         </div>
         <form>
           <label>Email address</label>
           <div className={styles.formInput}>
-            <Email/>
-            <input placeholder='Enter your email...'/>
+            <Email />
+            <input placeholder="Enter your email..." />
           </div>
           <label>Password</label>
           <div className={styles.formInput}>
-            <Password/>
-            <input placeholder='Create a password...'/>
+            <Password />
+            <input placeholder="Create a password..." />
           </div>
           <label>Repeat password</label>
           <div className={styles.formInput}>
-            <Password/>
-            <input placeholder='Repeat password...'/>
+            <Password />
+            <input placeholder="Repeat password..." />
           </div>
-          <button className={`blackBtn ${styles.registerBtn}`}>Register it now</button>
+          <button className={`blackBtn ${styles.registerBtn}`}>
+            Register it now
+          </button>
         </form>
       </div>
     </div>

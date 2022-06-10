@@ -1,29 +1,23 @@
-import React from 'react';
+import React from "react";
 //@ts-ignore
-import styles from './MenuToggle.module.scss';
-
+import styles from "./MenuToggle.module.scss";
 
 interface MenuType {
   isOpen: boolean;
   onToggle: () => void;
 }
 
-const MenuToggle = ({isOpen, onToggle}: MenuType): JSX.Element => {
+const MenuToggle = ({ isOpen, onToggle }: MenuType): JSX.Element => {
   const cls = [styles.menuToggle];
 
   if (isOpen) {
-    cls.push(styles.open)
-    cls.push(styles.menuClose)
+    cls.push(styles.open);
+    cls.push(styles.menuClose);
   } else {
-    cls.push(styles.menuOpen)
+    cls.push(styles.menuOpen);
   }
 
-  return (
-    <div
-      className={cls.join(' ')}
-      onClick={onToggle}
-    />
-  );
+  return <div className={cls.join(" ")} onClick={onToggle} />;
 };
 
 export default MenuToggle;

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 //@ts-ignore
-import styles from './BannerCard.module.scss';
+import styles from "./BannerCard.module.scss";
 
 interface BannerType {
   discount: string;
@@ -8,8 +8,8 @@ interface BannerType {
   caption: string;
 }
 
-const BannerCard = ({item}) => {
-  const {discount, title, caption}: BannerType = item;
+const BannerCard = ({ item }) => {
+  const { discount, title, caption }: BannerType = item;
 
   return (
     <div className={styles.container}>
@@ -17,9 +17,7 @@ const BannerCard = ({item}) => {
         <span> Upto {discount}% Off</span>
         <span>{title}</span>
         <span>{caption}</span>
-        <button className={`blackBtn ${styles.buyBtn}`}>
-          Shop It
-        </button>
+        <button className={`blackBtn ${styles.buyBtn}`}>Shop It</button>
       </div>
     </div>
   );
